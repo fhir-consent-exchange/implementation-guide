@@ -1,0 +1,45 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication">resourceType</a>" : "Medication",
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.id">id</a>" : "estrodiol-contraceptive",
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;form&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://snomed.info/sct 385055001}\&quot;&gt;Tablet dose form (qualifier value)&lt;/span&gt;&lt;/p&gt;&lt;h3&gt;Ingredients&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Item[x]&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Strength&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 24395}\&quot;&gt;Estradiol valerate&lt;/span&gt;&lt;/td&gt;&lt;td&gt;2 mg/1 TAB&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.form">form</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://snomed.info/sct",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "385055001",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Tablet dose form (qualifier value)"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient">ingredient</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.item[x]">itemCodeableConcept</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "24395",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Estradiol valerate"
+          }
+        ]
+      },
+      "<a href="http://hl7.org/fhir/R4/medication.html#Medication.ingredient.strength">strength</a>" : {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.numerator">numerator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 2,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://unitsofmeasure.org",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "mg"
+        },
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Ratio#Ratio.denominator">denominator</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.value">value</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Quantity#Quantity.code">code</a>" : "TAB"
+        }
+      }
+    }
+  ]
+}</code></pre>
+{% endraw %}

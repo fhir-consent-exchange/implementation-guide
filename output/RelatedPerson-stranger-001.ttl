@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/RelatedPerson/stranger-001> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "stranger-001"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><br><b>A random stranger</b></p><p>This record is intended to have no relationship to the patient in the use case or testing scenario. The intention is to have a record that the test runner can confirm is NOT accessible. Primarily intended for access control and null case testing.</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Patient/nobody/expansion\">Nobody</a></p><p><b>name</b>: RANDOM STRANGER</p><p><b>telecom</b>: ph: 212-555-1253(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1983-01-14</p></div>"
+  ];
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/nobody>;
+     fhir:Reference.reference [ fhir:value "Patient/nobody" ];
+     fhir:Reference.display [ fhir:value "Nobody" ]
+  ];
+  fhir:RelatedPerson.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "STRANGER" ];
+     fhir:HumanName.given [
+       fhir:value "RANDOM";
+       fhir:index 0
+     ]
+  ];
+  fhir:RelatedPerson.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "212-555-1253" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:RelatedPerson.gender [ fhir:value "female"];
+  fhir:RelatedPerson.birthDate [ fhir:value "1983-01-14"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/RelatedPerson/stranger-001.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

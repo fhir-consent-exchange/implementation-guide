@@ -1,0 +1,39 @@
+{
+  "resourceType": "Medication",
+  "id": "estrodiol-contraceptive",
+  "status": "active",
+  "form": {
+    "coding": [
+      {
+        "code": "385055001",
+        "system": "http://snomed.info/sct",
+        "display": "Tablet dose form (qualifier value)"
+      }
+    ]
+  },
+  "ingredient": [
+    {
+      "itemCodeableConcept": {
+        "coding": [
+          {
+            "code": "24395",
+            "system": "http://www.nlm.nih.gov/research/umls/rxnorm",
+            "display": "Estradiol valerate"
+          }
+        ]
+      },
+      "strength": {
+        "numerator": {
+          "value": 2,
+          "code": "mg",
+          "system": "http://unitsofmeasure.org"
+        },
+        "denominator": {
+          "value": 1,
+          "code": "TAB",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"
+        }
+      }
+    }
+  ]
+}

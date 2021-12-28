@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Patient xmlns="http://hl7.org/fhir">
+  <id value="jane-doe"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2020-09-13T12:21:34.589+00:00"/>
+    <source value="#mehi-consent-engine-reference-implementation"/>
+    <profile value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title="{urn:oid:2.16.840.1.113883.6.238 2106-3}">White</span></p><p><b>value</b>: <span title="{urn:oid:2.16.840.1.113883.6.238 1002-5}">American Indian or Alaska Native</span></p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title="{http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity 2186-5}">Non Hispanic or Latino</span></p><p><b>value</b>: Non Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>identifier</b>: Medical Record Number: 1042001 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: JANE DOE </p><p><b>telecom</b>: ph: 747-555-7474(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2001-01-15</p><p><b>generalPractitioner</b>: <a href="Practitioner-practitioner-alice-yin.html">Dr. Alice Yin. Generated Summary: active; ALICE YIN ; Phone: 555-555-8818; gender: female; birthDate: 1972-09-04</a></p><p><b>managingOrganization</b>: <a href="Organization-org-together-health.html">Together Health. Generated Summary: active; name: Together Health</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-race">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="2106-3"/>
+        <display value="White"/>
+      </valueCoding>
+    </extension>
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="urn:oid:2.16.840.1.113883.6.238"/>
+        <code value="1002-5"/>
+        <display value="American Indian or Alaska Native"/>
+      </valueCoding>
+    </extension>
+    <extension url="ombCategory"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity">
+    <extension url="ombCategory">
+      <valueCoding>
+        <system value="http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity"/>
+        <code value="2186-5"/>
+        <display value="Non Hispanic or Latino"/>
+      </valueCoding>
+    </extension>
+    <extension url="detailed">
+      <valueString value="Non Hispanic or Latino"/>
+    </extension>
+  </extension>
+  <extension url="http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex">
+    <valueCode value="F"/>
+  </extension>
+  <identifier>
+    <use value="usual"/>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v2-0203"/>
+        <code value="MR"/>
+        <display value="Medical Record Number"/>
+      </coding>
+      <text value="Medical Record Number"/>
+    </type>
+    <system value="http://hospital.smarthealthit.org"/>
+    <value value="1042001"/>
+  </identifier>
+  <active value="true"/>
+  <name>
+    <family value="DOE"/>
+    <given value="JANE"/>
+  </name>
+  <telecom>
+    <system value="phone"/>
+    <value value="747-555-7474"/>
+    <use value="home"/>
+  </telecom>
+  <gender value="female"/>
+  <birthDate value="2001-01-15"/>
+  <generalPractitioner>
+    <reference value="Practitioner/practitioner-alice-yin"/>
+    <display value="Dr. Alice Yin"/>
+  </generalPractitioner>
+  <managingOrganization>
+    <reference value="Organization/org-together-health"/>
+    <display value="Together Health"/>
+  </managingOrganization>
+</Patient>

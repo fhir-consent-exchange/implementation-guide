@@ -1,0 +1,243 @@
+﻿MeHIImplementationGuide : Validation Results
+=========================================
+
+err = 89, warn = 17, info = 28
+IG Publisher Version: 1.1.80 Out of date - current version is 1.1.93
+Generated Mon Dec 27 11:27:03 CST 2021. FHIR version 4.0.1 for mehi.ig.fhir#0.5.4 (canonical = http://mehi-ig.tranquildata.com)
+
+ Build Errors : 11 / 0 / 0
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/ImplementationGuide-mehi.ig.fhir : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/bundle-Jennifer-Consents-MA : 4 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-CmsInteroperabilityPolicyCodes : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-ConsentExchangeRelationships : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-PayorToPayorExchangePolicyCodes : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-Jennifer-MA-Rollup : 9 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-example1 : 1 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-example2 : 5 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-al-1 : 2 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-ma-1 : 3 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-ma-2 : 1 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-mass-community-insurance : 1 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-org-acme-insurance : 2 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-org-pillbox : 1 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-plentyrx : 2 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-plentyrx-revoke : 2 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medication-estrodiol-contraceptive : 0 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medicationrequest-medreq-1234557 : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medicationrequest-medreq-22348957 : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-acme-insurance : 0 / 0 / 2
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-mass-community-insurance : 0 / 0 / 2
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-pillbox : 0 / 0 / 2
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-plentyrx : 0 / 0 / 2
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-together-health : 0 / 0 / 2
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-jane-doe : 7 / 0 / 4
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-jennifer-smith : 4 / 0 / 9
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-patient-john-smith : 4 / 0 / 5
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/practitioner-practitioner-alice-yin : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/practitioner-practitioner-bernard-shuman : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jane-smith : 12 / 0 / 10
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jane-smith-wife : 6 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jennifer-smith-daughter : 6 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-john-smith : 12 / 0 / 7
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-stranger-001 : 4 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-careteam : 0 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-consent : 1 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-organization : 0 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-patient : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-practitioner : 0 / 1 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-related-person : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-ConsentExchangePolicies : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-ConsentExchangeRelations : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-consent-exchange-category-codes : 0 / 0 / 1
+ /Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-consent-exchange-scope-codes : 0 / 0 / 1
+</table>
+== n/a ==
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-jennifersmith-al-1.html#/html/body/div/div/div/div/div/div/blockquote/blockquote/p/a at Line 163, column 1211: The link 'http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-bernard-shuman/expansion' for "SHUMAN, BERNARD" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-jennifersmith-ma-1.html#/html/body/div/div/div/div/div/div/blockquote/blockquote/p/a at Line 163, column 1211: The link 'http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-alice-yin/expansion' for "Pracitioner/practitioner-alice-yin" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-jennifersmith-ma-1.html#/html/body/div/div/div/div/div/div/blockquote/blockquote/p/a at Line 163, column 1537: The link 'http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-alice-yin/expansion' for "Pracitioner/practitioner-alice-yin" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-johnsmith-consent-org-acme-insurance.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 647: The link 'http://fhir.org/packages/us.nlm.vsac/Organization/plentyrx/expansion' for "Plenty RX" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-johnsmith-consent-plentyrx-revoke.html#/html/body/div/div/div/div/div/div/blockquote/table/tr/td/a at Line 163, column 1241: The link 'http://fhir.org/packages/us.nlm.vsac/Organization/plentyrx/expansion' for "Organization/plentyrx" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/Consent-johnsmith-consent-plentyrx.html#/html/body/div/div/div/div/div/div/blockquote/table/tr/td/a at Line 163, column 1239: The link 'http://fhir.org/packages/us.nlm.vsac/Organization/plentyrx/expansion' for "Organization/plentyrx" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/RelatedPerson-related-person-jane-smith-wife.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 124: The link 'http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion' for "John Smith" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/RelatedPerson-related-person-jennifer-smith-daughter.html#/html/body/div/div/div/div/div/div/p/a at Line 163, column 124: The link 'http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion' for "Jennifer Smith" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/example1.html#/html/body/div/div/div/div/div/p/a at Line 203, column 97: The link './ConsentExchangeRelations.html' for "ConsentExchangeRelations" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/example1.html#/html/body/div/div/div/div/div/p/a at Line 223, column 640: The link './ConsentExchangeRelations.html' for "ConsentExchangeRelations" cannot be resolved
+ERROR: /Users/awatson/Code/mehi-consent-exchange/implementation-guide/output/example2.html#/html/body/div/div/div/div/div/p/a at Line 244, column 30: The link './ConsentExchangeRelations.html' for "ConsentExchangeRelations" cannot be resolved
+== fsh-generated/resources/ImplementationGuide-mehi.ig.fhir.json ==
+== fsh-generated/resources/Bundle-Jennifer-Consents-MA.json ==
+ERROR: Bundle/Jennifer-Consents-MA: Bundle.entry[0]: bdl-5: 'must be a resource unless there's a request or response' Rule 'must be a resource unless there's a request or response' Failed
+ERROR: Bundle/Jennifer-Consents-MA: Bundle.entry[1]: bdl-5: 'must be a resource unless there's a request or response' Rule 'must be a resource unless there's a request or response' Failed
+WARNING: Bundle/Jennifer-Consents-MA: Bundle: SearchSet Bundles should have a self link that specifies what the search was
+ERROR: Bundle/Jennifer-Consents-MA: Bundle.entry[0]: SearchSet Bundle Entries must have resources
+ERROR: Bundle/Jennifer-Consents-MA: Bundle.entry[1]: SearchSet Bundle Entries must have resources
+== fsh-generated/resources/CodeSystem-CmsInteroperabilityPolicyCodes.json ==
+== fsh-generated/resources/CodeSystem-ConsentExchangeRelationships.json ==
+== fsh-generated/resources/CodeSystem-PayorToPayorExchangePolicyCodes.json ==
+== fsh-generated/resources/Consent-Jennifer-MA-Rollup.json ==
+ERROR: Consent/Jennifer-MA-Rollup: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[0].actor[0].role.coding[0]: Unknown Code System 'http://hl7.org/fhir/ValuetSet/security-role-type'
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[0].actor[0].role.coding[0].system: URL value 'http://hl7.org/fhir/ValuetSet/security-role-type' does not resolve
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[0].role.coding[0]: Unknown Code System 'http://hl7.org/fhir/ValuetSet/security-role-type'
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[0].role.coding[0].system: URL value 'http://hl7.org/fhir/ValuetSet/security-role-type' does not resolve
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[0].reference: Unable to resolve resource 'Pracitioner/practitioner-alice-yin'
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[1].role.coding[0]: Unknown Code System 'http://hl7.org/fhir/ValuetSet/security-role-type'
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[1].role.coding[0].system: URL value 'http://hl7.org/fhir/ValuetSet/security-role-type' does not resolve
+ERROR: Consent/Jennifer-MA-Rollup: Consent.provision.provision[1].actor[1].reference: Unable to resolve resource 'Pracitioner/practitioner-alice-yin'
+WARNING: Consent/Jennifer-MA-Rollup: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-example1.json ==
+WARNING: Consent/example1: Consent.scope: Display Name for http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy should be one of 'Privacy Consent' instead of 'Patient Consent'
+ERROR: Consent/example1: Consent.category[0].coding[0]: Unknown Code http://terminology.hl7.org/CodeSystem/consentcategorycodes#64292-6 in http://terminology.hl7.org/CodeSystem/consentcategorycodes for 'http://terminology.hl7.org/CodeSystem/consentcategorycodes#64292-6'
+== fsh-generated/resources/Consent-example2.json ==
+WARNING: Consent/example2: Consent.scope: Display Name for http://terminology.hl7.org/CodeSystem/consentscope#patient-privacy should be one of 'Privacy Consent' instead of 'Patient Consent'
+ERROR: Consent/example2: Consent.category[0].coding[0]: Unknown Code http://terminology.hl7.org/CodeSystem/consentcategorycodes#64292-6 in http://terminology.hl7.org/CodeSystem/consentcategorycodes for 'http://terminology.hl7.org/CodeSystem/consentcategorycodes#64292-6'
+ERROR: Consent/example2: Consent.provision.provision[0].actor[0].role.coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: Consent/example2: Consent.provision.provision[0].actor[0].role.coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+ERROR: Consent/example2: Consent.provision.provision[1].actor[0].role.coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: Consent/example2: Consent.provision.provision[1].actor[0].role.coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+== fsh-generated/resources/Consent-jennifersmith-al-1.json ==
+ERROR: Consent/jennifersmith-al-1: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/jennifersmith-al-1: Consent.provision.actor[0].reference: Unable to resolve resource 'Pracitioner/practitioner-bernard-shuman'
+WARNING: Consent/jennifersmith-al-1: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-jennifersmith-ma-1.json ==
+ERROR: Consent/jennifersmith-ma-1: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/jennifersmith-ma-1: Consent.provision.actor[0].reference: Unable to resolve resource 'Pracitioner/practitioner-alice-yin'
+ERROR: Consent/jennifersmith-ma-1: Consent.provision.actor[1].reference: Unable to resolve resource 'Pracitioner/practitioner-alice-yin'
+WARNING: Consent/jennifersmith-ma-1: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-jennifersmith-ma-2.json ==
+ERROR: Consent/jennifersmith-ma-2: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+WARNING: Consent/jennifersmith-ma-2: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-johnsmith-consent-mass-community-insurance.json ==
+ERROR: Consent/johnsmith-consent-mass-community-insurance: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+WARNING: Consent/johnsmith-consent-mass-community-insurance: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-johnsmith-consent-org-acme-insurance.json ==
+ERROR: Consent/johnsmith-consent-org-acme-insurance: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/johnsmith-consent-org-acme-insurance: Consent.organization[0]: Unable to resolve resource 'Organization/plentyrx'
+WARNING: Consent/johnsmith-consent-org-acme-insurance: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-johnsmith-consent-org-pillbox.json ==
+ERROR: Consent/johnsmith-consent-org-pillbox: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+WARNING: Consent/johnsmith-consent-org-pillbox: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-johnsmith-consent-plentyrx.json ==
+ERROR: Consent/johnsmith-consent-plentyrx: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/johnsmith-consent-plentyrx: Consent.provision.actor[0].reference: Unable to resolve resource 'Organization/plentyrx'
+WARNING: Consent/johnsmith-consent-plentyrx: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Consent-johnsmith-consent-plentyrx-revoke.json ==
+ERROR: Consent/johnsmith-consent-plentyrx-revoke: Consent.meta.profile[0]: Canonical URL 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' does not resolve
+ERROR: Consent/johnsmith-consent-plentyrx-revoke: Consent.provision.actor[0].reference: Unable to resolve resource 'Organization/plentyrx'
+WARNING: Consent/johnsmith-consent-plentyrx-revoke: Consent.meta.profile[0]: Profile reference 'http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1' has not been checked because it is unknown, and the validator is set to not fetch unknown profiles
+== fsh-generated/resources/Medication-estrodiol-contraceptive.json ==
+WARNING: Medication/estrodiol-contraceptive: Medication.form.coding[0]: The display "Tablet dose form (qualifier value)" is not a valid display for the code {http://snomed.info/sct}385055001 - should be one of ['Tablet', 'Tablet (basic dose form)', 'A solid single-dose preparation obtained by compressing uniform volumes of particulate solids or by extrusion or moulding. Tablets may be single layer tablets resulting from a single compression of particles and or multilayer tablets consisting of concentric or parallel layers obtained by successive compressions of particles of different composition.'] (from http://tx.fhir.org/r4) for 'http://snomed.info/sct#385055001'
+== fsh-generated/resources/MedicationRequest-medreq-1234557.json ==
+== fsh-generated/resources/MedicationRequest-medreq-22348957.json ==
+== fsh-generated/resources/Organization-org-acme-insurance.json ==
+== fsh-generated/resources/Organization-org-mass-community-insurance.json ==
+== fsh-generated/resources/Organization-org-pillbox.json ==
+== fsh-generated/resources/Organization-org-plentyrx.json ==
+== fsh-generated/resources/Organization-org-together-health.json ==
+== fsh-generated/resources/Patient-jane-doe.json ==
+ERROR: Patient/jane-doe: Patient.extension[0]: Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)
+INFORMATION: Patient/jane-doe: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/jane-doe: Patient.extension[0].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/jane-doe: Patient.extension[0].extension[2]: ext-1: 'Must have either extensions or value[x], not both' Rule 'Must have either extensions or value[x], not both' Failed
+ERROR: Patient/jane-doe: Patient.extension[0].extension[2]: Extension.extension:ombCategory.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)
+ERROR: Patient/jane-doe: Patient.extension[0].extension[2]: Extension.extension:ombCategory.value[x]:valueCoding: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)
+ERROR: Patient/jane-doe: Patient.extension[1]: Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity)
+ERROR: Patient/jane-doe: Patient.extension[1].extension[0].value.ofType(Coding): Unknown Code System 'http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity'
+ERROR: Patient/jane-doe: Patient.extension[1].extension[0].value.ofType(Coding).system: URL value 'http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity' does not resolve
+== fsh-generated/resources/Patient-jennifer-smith.json ==
+INFORMATION: Patient/jennifer-smith: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/jennifer-smith: Patient.extension[0].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/jennifer-smith: Patient.extension[0].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/jennifer-smith: Patient.extension[0].extension[3].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/jennifer-smith: Patient.extension[0].extension[3].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2036-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914)
+INFORMATION: Patient/jennifer-smith: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/jennifer-smith: Patient.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2135-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837)
+INFORMATION: Patient/jennifer-smith: Patient.extension[1].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/jennifer-smith: Patient.extension[1].extension[1].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+INFORMATION: Patient/jennifer-smith: Patient.extension[1].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/jennifer-smith: Patient.extension[1].extension[2].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+== fsh-generated/resources/Patient-patient-john-smith.json ==
+ERROR: Patient/patient-john-smith: Patient.extension[0]: Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)
+INFORMATION: Patient/patient-john-smith: Patient.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: Patient/patient-john-smith: Patient.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/patient-john-smith: Patient.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2135-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837)
+INFORMATION: Patient/patient-john-smith: Patient.extension[1].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/patient-john-smith: Patient.extension[1].extension[1].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+INFORMATION: Patient/patient-john-smith: Patient.extension[1].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: Patient/patient-john-smith: Patient.extension[1].extension[2].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+== fsh-generated/resources/Practitioner-practitioner-alice-yin.json ==
+== fsh-generated/resources/Practitioner-practitioner-bernard-shuman.json ==
+== fsh-generated/resources/RelatedPerson-related-person-jane-smith.json ==
+ERROR: RelatedPerson.text.div: Resource has provided narrative, but the narrative indicates that it is generated - remove the narrative or fix it up
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-race is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[0].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[0].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[0].extension[3].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[0].extension[3].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2036-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.113883.1.11.14914)
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2135-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837)
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[1].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.extension[1].extension[2].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype#MTH)
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[0].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[0].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+INFORMATION: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[1]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/CodeSystem/consent-exchange-relationships#Parent)
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[1].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships'
+ERROR: RelatedPerson/related-person-jane-smith: RelatedPerson.relationship[1].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships' does not resolve
+== fsh-generated/resources/RelatedPerson-related-person-jane-smith-wife.json ==
+ERROR: RelatedPerson.text.div: Resource has provided narrative, but the narrative indicates that it is generated - remove the narrative or fix it up
+ERROR: RelatedPerson/related-person-jane-smith-wife: RelatedPerson.patient: Unable to resolve resource 'Patient/john-smith'
+ERROR: RelatedPerson/related-person-jane-smith-wife: RelatedPerson.relationship[0].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: RelatedPerson/related-person-jane-smith-wife: RelatedPerson.relationship[0].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+ERROR: RelatedPerson/related-person-jane-smith-wife: RelatedPerson.relationship[1].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships'
+ERROR: RelatedPerson/related-person-jane-smith-wife: RelatedPerson.relationship[1].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships' does not resolve
+== fsh-generated/resources/RelatedPerson-related-person-jennifer-smith-daughter.json ==
+ERROR: RelatedPerson.text.div: Resource has provided narrative, but the narrative indicates that it is generated - remove the narrative or fix it up
+ERROR: RelatedPerson/related-person-jennifer-smith-daughter: RelatedPerson.patient: Unable to resolve resource 'Patient/john-smith'
+ERROR: RelatedPerson/related-person-jennifer-smith-daughter: RelatedPerson.relationship[0].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: RelatedPerson/related-person-jennifer-smith-daughter: RelatedPerson.relationship[0].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+ERROR: RelatedPerson/related-person-jennifer-smith-daughter: RelatedPerson.relationship[1].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships'
+ERROR: RelatedPerson/related-person-jennifer-smith-daughter: RelatedPerson.relationship[1].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships' does not resolve
+== fsh-generated/resources/RelatedPerson-related-person-john-smith.json ==
+ERROR: RelatedPerson.text.div: Resource has provided narrative, but the narrative indicates that it is generated - remove the narrative or fix it up
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-race is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.extension[0]: Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.extension[0].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[0].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[0].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2135-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837)
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[1].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[1].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[2].value.ofType(Coding): Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.extension[1].extension[2].value.ofType(Coding): The Coding provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson: The extension http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex is not allowed to be used at this point (allowed = e:Patient; this element is [[RelatedPerson])
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[0]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype#FTH)
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[0].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype'
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[0].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype' does not resolve
+INFORMATION: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[1]: None of the codings provided are in the value set http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype (http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype), and a coding is recommended to come from this value set) (codes = http://hl7.org/fhir/CodeSystem/consent-exchange-relationships#Parent)
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[1].coding[0]: Unknown Code System 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships'
+ERROR: RelatedPerson/related-person-john-smith: RelatedPerson.relationship[1].coding[0].system: URL value 'http://hl7.org/fhir/CodeSystem/consent-exchange-relationships' does not resolve
+== fsh-generated/resources/RelatedPerson-stranger-001.json ==
+ERROR: RelatedPerson.text.div: Error parsing XHTML: Malformed XHTML: Found "</p>" expecting "</br>" at line 1 column 78
+ERROR: RelatedPerson/stranger-001: RelatedPerson.text.div: txt-1: 'The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes' Rule 'The narrative SHALL contain only the basic html formatting elements and attributes described in chapters 7-11 (except section 4 of chapter 9) and 15 of the HTML 4.0 standard, <a> elements (either name or href), images and internally contained style attributes' Failed
+ERROR: RelatedPerson/stranger-001: RelatedPerson.text.div: txt-2: 'The narrative SHALL have some non-whitespace content' Rule 'The narrative SHALL have some non-whitespace content' Failed
+ERROR: RelatedPerson/stranger-001: RelatedPerson.patient: Unable to resolve resource 'Patient/nobody'
+== fsh-generated/resources/StructureDefinition-consent-exchange-careteam.json ==
+WARNING: StructureDefinition.where(url = 'http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-careteam'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-consent-exchange-consent.json ==
+ERROR: StructureDefinition/consent-exchange-consent: StructureDefinition.snapshot.element[9].example[0].value.ofType(Identifier): if identifier.system is ''urn:ietf:rfc:3986'', then the identifier.value must be a full URI (e.g. start with a scheme)
+WARNING: StructureDefinition.where(url = 'http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-consent'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-consent-exchange-organization.json ==
+WARNING: StructureDefinition.where(url = 'http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-organization'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-consent-exchange-patient.json ==
+== fsh-generated/resources/StructureDefinition-consent-exchange-practitioner.json ==
+WARNING: StructureDefinition.where(url = 'http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-practitioner'): The Implementation Guide contains no examples for this profile
+== fsh-generated/resources/StructureDefinition-consent-exchange-related-person.json ==
+== fsh-generated/resources/ValueSet-ConsentExchangePolicies.json ==
+== fsh-generated/resources/ValueSet-ConsentExchangeRelations.json ==
+== fsh-generated/resources/ValueSet-consent-exchange-category-codes.json ==
+== fsh-generated/resources/ValueSet-consent-exchange-scope-codes.json ==

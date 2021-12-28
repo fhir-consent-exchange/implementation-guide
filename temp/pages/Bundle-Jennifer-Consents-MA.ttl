@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Bundle/Jennifer-Consents-MA> a fhir:Bundle;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Jennifer-Consents-MA"];
+  fhir:Bundle.type [ fhir:value "searchset"];
+  fhir:Bundle.total [ fhir:value "2"^^xsd:nonNegativeInteger];
+  fhir:Bundle.entry [
+     fhir:index 0;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Consent/jennifersmith-ma-2" ]
+  ], [
+     fhir:index 1;
+     fhir:Bundle.entry.fullUrl [ fhir:value "Consent/jennifersmith-ma-1" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Bundle/Jennifer-Consents-MA.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

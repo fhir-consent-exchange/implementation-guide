@@ -1,0 +1,20 @@
+﻿<html>
+<head>
+  <title>Patient-patient-john-smith-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>structure</td><td>Patient/patient-john-smith: Patient.extension[0]</td><td>Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)</td><td></td></tr>
+<tr><td>error</td><td>code-invalid</td><td>Patient/patient-john-smith: Patient.extension[1].extension[0].value.ofType(Coding)</td><td>The Coding provided (urn:oid:2.16.840.1.113883.6.238#2135-2) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.837)</td><td></td></tr>
+<tr><td>error</td><td>code-invalid</td><td>Patient/patient-john-smith: Patient.extension[1].extension[1].value.ofType(Coding)</td><td>The Coding provided (urn:oid:2.16.840.1.113883.6.238#2184-0) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)</td><td></td></tr>
+<tr><td>error</td><td>code-invalid</td><td>Patient/patient-john-smith: Patient.extension[1].extension[2].value.ofType(Coding)</td><td>The Coding provided (urn:oid:2.16.840.1.113883.6.238#2148-5) is not in the value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877, and a code is required from this value set.  (error message = Not in value set http://cts.nlm.nih.gov/fhir/ValueSet/2.16.840.1.114222.4.11.877)</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Patient/patient-john-smith: Patient</td><td>Validate resource against profile http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/patient-john-smith: Patient.extension[0].extension[0].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/patient-john-smith: Patient.extension[1].extension[0].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/patient-john-smith: Patient.extension[1].extension[1].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/patient-john-smith: Patient.extension[1].extension[2].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+</table>
+</body>
+</html>

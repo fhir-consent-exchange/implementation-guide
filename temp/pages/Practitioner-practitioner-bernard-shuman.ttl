@@ -1,0 +1,50 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Practitioner/practitioner-bernard-shuman> a fhir:Practitioner;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "practitioner-bernard-shuman"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: BERNARD SHUMAN </p><p><b>telecom</b>: ph: 555-555-1120(HOME)</p><p><b>address</b>: 1120 Maple St Birmingham AL 35242 US </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1965-03-24</p></div>"
+  ];
+  fhir:Practitioner.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Practitioner.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "SHUMAN" ];
+     fhir:HumanName.given [
+       fhir:value "BERNARD";
+       fhir:index 0
+     ]
+  ];
+  fhir:Practitioner.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "555-555-1120" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Practitioner.address [
+     fhir:index 0;
+     fhir:Address.line [
+       fhir:value "1120 Maple St";
+       fhir:index 0
+     ];
+     fhir:Address.city [ fhir:value "Birmingham" ];
+     fhir:Address.state [ fhir:value "AL" ];
+     fhir:Address.postalCode [ fhir:value "35242" ];
+     fhir:Address.country [ fhir:value "US" ]
+  ];
+  fhir:Practitioner.gender [ fhir:value "male"];
+  fhir:Practitioner.birthDate [ fhir:value "1965-03-24"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Practitioner/practitioner-bernard-shuman.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,100 @@
+[
+  {
+    "id": "CmsInteroperabilityPolicyCodes",
+    "type": "CodeSystem",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes",
+    "version": "0.5.4",
+    "name": "CmsInteroperabilityPolicyCodes"
+  },
+  {
+    "id": "ConsentExchangeRelationships",
+    "type": "CodeSystem",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships",
+    "version": "0.5.4",
+    "name": "ConsentExchangeRelationships"
+  },
+  {
+    "id": "PayorToPayorExchangePolicyCodes",
+    "type": "CodeSystem",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes",
+    "version": "0.5.4",
+    "name": "PayorToPayorExchangePolicyCodes"
+  },
+  {
+    "id": "mehi.ig.fhir",
+    "type": "ImplementationGuide",
+    "url": "http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir",
+    "version": "0.5.4",
+    "name": "MeHIImplementationGuide"
+  },
+  {
+    "id": "consent-exchange-careteam",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-careteam",
+    "version": "0.5.4",
+    "name": "ConsentExchangeCareTeam"
+  },
+  {
+    "id": "consent-exchange-consent",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-consent",
+    "version": "0.5.4",
+    "name": "ConsentExchangeConsent"
+  },
+  {
+    "id": "consent-exchange-organization",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-organization",
+    "version": "0.5.4",
+    "name": "ConsentExchangeOrganization"
+  },
+  {
+    "id": "consent-exchange-patient",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient",
+    "version": "0.5.4",
+    "name": "ConsentExchangePatient"
+  },
+  {
+    "id": "consent-exchange-practitioner",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-practitioner",
+    "version": "0.5.4",
+    "name": "ConsentExchangePractitioner"
+  },
+  {
+    "id": "consent-exchange-related-person",
+    "type": "StructureDefinition",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person",
+    "version": "0.5.4",
+    "name": "ConsentExchangeRelatedPerson"
+  },
+  {
+    "id": "ConsentExchangePolicies",
+    "type": "ValueSet",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies",
+    "version": "0.5.4",
+    "name": "ConsentExchangePolicies"
+  },
+  {
+    "id": "ConsentExchangeRelations",
+    "type": "ValueSet",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangeRelations",
+    "version": "0.5.4",
+    "name": "ConsentExchangeRelations"
+  },
+  {
+    "id": "consent-exchange-category-codes",
+    "type": "ValueSet",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/consent-exchange-category-codes",
+    "version": "0.5.4",
+    "name": "ConsentExchangeCategoryCodes"
+  },
+  {
+    "id": "consent-exchange-scope-codes",
+    "type": "ValueSet",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/consent-exchange-scope-codes",
+    "version": "0.5.4",
+    "name": "ConsentExchangeScopeCodes"
+  }
+]

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="Jennifer-Consents-MA"/>
+  <type value="searchset"/>
+  <total value="2"/>
+  <entry>
+    <fullUrl value="Consent/jennifersmith-ma-2"/>
+  </entry>
+  <entry>
+    <fullUrl value="Consent/jennifersmith-ma-1"/>
+  </entry>
+</Bundle>

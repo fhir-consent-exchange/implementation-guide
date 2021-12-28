@@ -1,0 +1,158 @@
+{
+  "resourceType": "Consent",
+  "id": "Jennifer-MA-Rollup",
+  "meta": {
+    "versionId": "1",
+    "source": "node-on-fhir.mitre.org#mehi-consent-engine",
+    "profile": [
+      "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"
+    ]
+  },
+  "status": "active",
+  "scope": {
+    "coding": [
+      {
+        "code": "patient-privacy",
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "display": "Privacy Consent"
+      }
+    ]
+  },
+  "category": [
+    {
+      "coding": [
+        {
+          "code": "IDSCL",
+          "system": "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "display": "information disclosure"
+        }
+      ]
+    }
+  ],
+  "patient": {
+    "reference": "Patient/jennifer-smith",
+    "display": "SMITH, JENNIFER"
+  },
+  "dateTime": "2021-09-02",
+  "organization": [
+    {
+      "reference": "Organization/org-together-health",
+      "display": "Together Health"
+    }
+  ],
+  "policyRule": {
+    "coding": [
+      {
+        "code": "hipaa-auth",
+        "system": "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+        "display": "HIPAA Authorization"
+      }
+    ]
+  },
+  "provision": {
+    "provision": [
+      {
+        "type": "permit",
+        "period": {
+          "start": "2021-01-01"
+        },
+        "actor": [
+          {
+            "role": {
+              "coding": [
+                {
+                  "code": "EVTWIT",
+                  "system": "http://hl7.org/fhir/ValuetSet/security-role-type",
+                  "display": "Event Witness"
+                }
+              ]
+            },
+            "reference": {
+              "reference": "RelatedPerson/related-person-jane-smith"
+            }
+          }
+        ],
+        "action": [
+          {
+            "text": "Access",
+            "coding": [
+              {
+                "code": "access",
+                "system": "http://terminology.hl7.org/CodeSystem/consentaction",
+                "display": "Access"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "permit",
+        "period": {
+          "start": "2021-09-02"
+        },
+        "actor": [
+          {
+            "role": {
+              "coding": [
+                {
+                  "code": "EVTWIT",
+                  "system": "http://hl7.org/fhir/ValuetSet/security-role-type",
+                  "display": "Event Witness"
+                }
+              ]
+            },
+            "reference": {
+              "reference": "Pracitioner/practitioner-alice-yin"
+            }
+          },
+          {
+            "role": {
+              "coding": [
+                {
+                  "code": "VALID",
+                  "system": "http://hl7.org/fhir/ValuetSet/security-role-type",
+                  "display": "Validator"
+                }
+              ]
+            },
+            "reference": {
+              "reference": "Pracitioner/practitioner-alice-yin"
+            }
+          }
+        ],
+        "action": [
+          {
+            "text": "Collect",
+            "coding": [
+              {
+                "code": "collect",
+                "system": "http://terminology.hl7.org/CodeSystem/consentaction",
+                "display": "Collect"
+              }
+            ]
+          },
+          {
+            "text": "Access",
+            "coding": [
+              {
+                "code": "access",
+                "system": "http://terminology.hl7.org/CodeSystem/consentaction",
+                "display": "Access"
+              }
+            ]
+          },
+          {
+            "text": "Access and Correct",
+            "coding": [
+              {
+                "code": "correct",
+                "system": "http://terminology.hl7.org/CodeSystem/consentaction",
+                "display": "Access and Correct"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

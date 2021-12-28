@@ -1,0 +1,64 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/RelatedPerson/related-person-jane-smith-wife> a fhir:RelatedPerson;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "related-person-jane-smith-wife"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person";
+       fhir:index 0;
+       fhir:link <http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion\">John Smith</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype WIFE}\">wife</span>, <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Spouse}\">Spouse</span></p><p><b>name</b>: JANE SMITH</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1981-01-10</p></div>"
+  ];
+  fhir:RelatedPerson.active [ fhir:value "true"^^xsd:boolean];
+  fhir:RelatedPerson.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/john-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/john-smith" ];
+     fhir:Reference.display [ fhir:value "John Smith" ]
+  ];
+  fhir:RelatedPerson.relationship [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype" ];
+       fhir:Coding.code [ fhir:value "WIFE" ];
+       fhir:Coding.display [ fhir:value "wife" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "wife" ]
+  ], [
+     fhir:index 1;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/consent-exchange-relationships" ];
+       fhir:Coding.code [ fhir:value "Spouse" ];
+       fhir:Coding.display [ fhir:value "Spouse" ]
+     ];
+     fhir:CodeableConcept.text [ fhir:value "Spouse" ]
+  ];
+  fhir:RelatedPerson.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "SMITH" ];
+     fhir:HumanName.given [
+       fhir:value "JANE";
+       fhir:index 0
+     ]
+  ];
+  fhir:RelatedPerson.gender [ fhir:value "female"];
+  fhir:RelatedPerson.birthDate [ fhir:value "1981-01-10"^^xsd:date] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/RelatedPerson/related-person-jane-smith-wife.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

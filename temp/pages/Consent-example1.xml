@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="example1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}">Patient Consent</span></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes 64292-6}">Release of information consent</span></p><p><b>patient</b>: <a href="Patient-patient-john-smith.html">SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14</a></p><p><b>dateTime</b>: 2021-06-01</p><p><b>organization</b>: <a href="Organization-org-mass-community-insurance.html">Massachusetts Community Insurance. Generated Summary: active; name: Massachusetts Community Insurance</a></p><p><b>policyRule</b>: <span title="Codes: {http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes CMS-9115-F.V}">Health Information Exchange and Care Coordination Across Payers</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-06-01 --&gt; 2022-06-01</p><h3>Actors</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleClass PROV}">healthcare provider</span></td><td><a href="Organization-org-acme-insurance.html">ACME Insurance. Generated Summary: active; name: ACME Insurance</a></td></tr></table><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote></div>
+  </text>
+  <status value="active"/>
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+      <code value="patient-privacy"/>
+      <display value="Patient Consent"/>
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentcategorycodes"/>
+      <code value="64292-6"/>
+      <display value="Release of information consent"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/patient-john-smith"/>
+    <display value="SMITH, JOHN"/>
+  </patient>
+  <dateTime value="2021-06-01"/>
+  <organization>
+    <reference value="Organization/org-mass-community-insurance"/>
+    <display value="Massachusetts Community Insurance"/>
+  </organization>
+  <policyRule>
+    <coding>
+      <system value="http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes"/>
+      <code value="CMS-9115-F.V"/>
+      <display value="Health Information Exchange and Care Coordination Across Payers"/>
+    </coding>
+  </policyRule>
+  <provision>
+    <type value="permit"/>
+    <period>
+      <start value="2021-06-01"/>
+      <end value="2022-06-01"/>
+    </period>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/v3-RoleClass"/>
+          <code value="PROV"/>
+          <display value="healthcare provider"/>
+        </coding>
+      </role>
+      <reference>
+        <reference value="Organization/org-acme-insurance"/>
+        <display value="ACME Insurance"/>
+      </reference>
+    </actor>
+    <action>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+        <code value="access"/>
+        <display value="Access"/>
+      </coding>
+      <text value="Access"/>
+    </action>
+  </provision>
+</Consent>

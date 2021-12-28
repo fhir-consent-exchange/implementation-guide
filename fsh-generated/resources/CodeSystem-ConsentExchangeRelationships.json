@@ -1,0 +1,11 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ConsentExchangeRelationships",
+  "id": "ConsentExchangeRelationships",
+  "title": "ConsentExchangeRelationships",
+  "description": "Relationships used to model and exchange consent relationships",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships"
+}

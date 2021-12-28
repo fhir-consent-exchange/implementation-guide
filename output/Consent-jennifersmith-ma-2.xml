@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="jennifersmith-ma-2"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2021-09-01T00:00:00.0000+00:00"/>
+    <source value="node-on-fhir.mitre.org#mehi-consent-engine"/>
+    <profile value="http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}">Privacy Consent</span></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}">information disclosure</span></p><p><b>patient</b>: <a href="Patient-jennifer-smith.html">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>dateTime</b>: 2021-09-02</p><p><b>organization</b>: <a href="Organization-org-together-health.html">Together Health. Generated Summary: active; name: Together Health</a></p><p><b>policyRule</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-01-01 --&gt; (ongoing)</p><h3>Actors</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title="Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}">Event Witness</span></td><td><a href="RelatedPerson-related-person-jane-smith.html">Generated Summary: active; <span title="Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype MTH}">mother</span>, <span title="Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Parent}">Parent</span>; JANE SMITH ; Phone: 555-555-5554; gender: female; birthDate: 1981-01-10</a></td></tr></table><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote></div>
+  </text>
+  <status value="active"/>
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+      <code value="patient-privacy"/>
+      <display value="Privacy Consent"/>
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ActCode"/>
+      <code value="IDSCL"/>
+      <display value="information disclosure"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/jennifer-smith"/>
+    <display value="SMITH, JENNIFER"/>
+  </patient>
+  <dateTime value="2021-09-02"/>
+  <organization>
+    <reference value="Organization/org-together-health"/>
+    <display value="Together Health"/>
+  </organization>
+  <policyRule>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentpolicycodes"/>
+      <code value="hipaa-auth"/>
+      <display value="HIPAA Authorization"/>
+    </coding>
+  </policyRule>
+  <provision>
+    <type value="permit"/>
+    <period>
+      <start value="2021-01-01"/>
+    </period>
+    <actor>
+      <role>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/contractsignertypecodes"/>
+          <code value="EVTWIT"/>
+          <display value="Event Witness"/>
+        </coding>
+      </role>
+      <reference>
+        <reference value="RelatedPerson/related-person-jane-smith"/>
+      </reference>
+    </actor>
+    <action>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+        <code value="access"/>
+        <display value="Access"/>
+      </coding>
+      <text value="Access"/>
+    </action>
+  </provision>
+</Consent>

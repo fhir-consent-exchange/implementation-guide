@@ -1,0 +1,100 @@
+﻿<html>
+<head>
+  <title>Consent-johnsmith-consent-org-acme-insurance-json-html</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent">resourceType</a>" : "Consent",
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.id">id</a>" : "johnsmith-consent-org-acme-insurance",
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.versionId">versionId</a>" : "1",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.lastUpdated">lastUpdated</a>" : "2021-07-01T00:00:00.0000+00:00",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;status&lt;/b&gt;: active&lt;/p&gt;&lt;p&gt;&lt;b&gt;scope&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\&quot;&gt;Privacy Consent&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;category&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\&quot;&gt;information disclosure&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;Patient-patient-john-smith.html\&quot;&gt;SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;dateTime&lt;/b&gt;: 2013-02-01&lt;/p&gt;&lt;p&gt;&lt;b&gt;organization&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/packages/us.nlm.vsac/Organization/plentyrx/expansion\&quot;&gt;Plenty RX&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;policyRule&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\&quot;&gt;HIPAA Authorization&lt;/span&gt;&lt;/p&gt;&lt;blockquote&gt;&lt;p&gt;&lt;b&gt;provision&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;type&lt;/b&gt;: permit&lt;/p&gt;&lt;p&gt;&lt;b&gt;period&lt;/b&gt;: 2021-01-01 --&amp;gt; (ongoing)&lt;/p&gt;&lt;h3&gt;Actors&lt;/h3&gt;&lt;table class=\&quot;grid\&quot;&gt;&lt;tr&gt;&lt;td&gt;-&lt;/td&gt;&lt;td&gt;&lt;b&gt;Role&lt;/b&gt;&lt;/td&gt;&lt;td&gt;&lt;b&gt;Reference&lt;/b&gt;&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;*&lt;/td&gt;&lt;td&gt;&lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleClass AFFL}\&quot;&gt;affiliate&lt;/span&gt;&lt;/td&gt;&lt;td&gt;&lt;a href=\&quot;Organization-org-acme-insurance.html\&quot;&gt;ACME Insurance. Generated Summary: active; name: ACME Insurance&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;p&gt;&lt;b&gt;action&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\&quot;&gt;Access&lt;/span&gt;&lt;/p&gt;&lt;/blockquote&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.scope">scope</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentscope",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "patient-privacy",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Privacy Consent"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.category">category</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "IDSCL",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "information disclosure"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.patient">patient</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/patient-john-smith",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "SMITH, JOHN"
+  },
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.dateTime">dateTime</a>" : "2013-02-01",
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.organization">organization</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/plentyrx",
+      "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Plenty RX"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.policyRule">policyRule</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "hipaa-auth",
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "HIPAA Authorization"
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision">provision</a>" : {
+    "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.type">type</a>" : "permit",
+    "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.period">period</a>" : {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#Period#Period.start">start</a>" : "2021-01-01"
+    },
+    "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.actor">actor</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.actor.role">role</a>" : {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/v3-RoleClass",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "AFFL",
+              "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "affiliate"
+            }
+          ]
+        },
+        "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.actor.reference">reference</a>" : {
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Organization/org-acme-insurance",
+          "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "ACME Insurance"
+        }
+      }
+    ],
+    "<a href="http://hl7.org/fhir/R4/consent.html#Consent.provision.action">action</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://terminology.hl7.org/CodeSystem/consentaction",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "access",
+            "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Access"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Access"
+      }
+    ]
+  }
+}</code></pre>
+</body>
+</html>

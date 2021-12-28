@@ -1,0 +1,101 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/johnsmith-consent-org-acme-insurance> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "johnsmith-consent-org-acme-insurance"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2021-07-01T00:00:00.0000+00:00"^^xsd:dateTime ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\">information disclosure</span></p><p><b>patient</b>: <a href=\"Patient-patient-john-smith.html\">SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14</a></p><p><b>dateTime</b>: 2013-02-01</p><p><b>organization</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Organization/plentyrx/expansion\">Plenty RX</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-01-01 --&gt; (ongoing)</p><h3>Actors</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleClass AFFL}\">affiliate</span></td><td><a href=\"Organization-org-acme-insurance.html\">ACME Insurance. Generated Summary: active; name: ACME Insurance</a></td></tr></table><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote></div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ];
+       fhir:Coding.display [ fhir:value "Privacy Consent" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "IDSCL" ];
+       fhir:Coding.display [ fhir:value "information disclosure" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/patient-john-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-john-smith" ];
+     fhir:Reference.display [ fhir:value "SMITH, JOHN" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2013-02-01"^^xsd:date];
+  fhir:Consent.organization [
+     fhir:index 0;
+     fhir:link <http://mehi-ig.tranquildata.com/Organization/plentyrx>;
+     fhir:Reference.reference [ fhir:value "Organization/plentyrx" ];
+     fhir:Reference.display [ fhir:value "Plenty RX" ]
+  ];
+  fhir:Consent.policyRule [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentpolicycodes" ];
+       fhir:Coding.code [ fhir:value "hipaa-auth" ];
+       fhir:Coding.display [ fhir:value "HIPAA Authorization" ]
+     ]
+  ];
+  fhir:Consent.provision [
+     fhir:Consent.provision.type [ fhir:value "permit" ];
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2021-01-01"^^xsd:date ]
+     ];
+     fhir:Consent.provision.actor [
+       fhir:index 0;
+       fhir:Consent.provision.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleClass" ];
+           fhir:Coding.code [ fhir:value "AFFL" ];
+           fhir:Coding.display [ fhir:value "affiliate" ]
+         ]
+       ];
+       fhir:Consent.provision.actor.reference [
+         fhir:link <http://mehi-ig.tranquildata.com/Organization/org-acme-insurance>;
+         fhir:Reference.reference [ fhir:value "Organization/org-acme-insurance" ];
+         fhir:Reference.display [ fhir:value "ACME Insurance" ]
+       ]
+     ];
+     fhir:Consent.provision.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ];
+         fhir:Coding.display [ fhir:value "Access" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Access" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/johnsmith-consent-org-acme-insurance.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

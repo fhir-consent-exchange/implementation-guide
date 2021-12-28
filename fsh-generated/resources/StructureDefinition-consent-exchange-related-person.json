@@ -1,0 +1,70 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "consent-exchange-related-person",
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-category",
+      "valueString": "Base.Individuals"
+    },
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-security-category",
+      "valueCode": "patient"
+    }
+  ],
+  "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person",
+  "version": "0.5.4",
+  "name": "ConsentExchangeRelatedPerson",
+  "title": "ConsentExchangeRelatedPerson",
+  "status": "active",
+  "description": "RelatedPerson resource for describing actors in an payor-to-payor data exchange workflow.",
+  "fhirVersion": "4.0.1",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "RelatedPerson",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "RelatedPerson.relationship",
+        "path": "RelatedPerson.relationship",
+        "binding": {
+          "strength": "preferred",
+          "valueSet": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangeRelations"
+        }
+      },
+      {
+        "id": "RelatedPerson.telecom",
+        "path": "RelatedPerson.telecom",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.address",
+        "path": "RelatedPerson.address",
+        "max": "0"
+      },
+      {
+        "id": "RelatedPerson.communication",
+        "path": "RelatedPerson.communication",
+        "max": "0"
+      }
+    ]
+  }
+}

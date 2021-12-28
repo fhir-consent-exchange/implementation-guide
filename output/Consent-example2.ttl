@@ -1,0 +1,203 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/example2> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example2"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Patient Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes 64292-6}\">Release of information consent</span></p><p><b>patient</b>: <a href=\"Patient-patient-john-smith.html\">SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14</a></p><p><b>dateTime</b>: 2021-12-15</p><p><b>policyRule</b>: <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes CMS-9115-F.V}\">Health Information Exchange and Care Coordination Across Payers</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote></blockquote></div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ];
+       fhir:Coding.display [ fhir:value "Patient Consent" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentcategorycodes" ];
+       fhir:Coding.code [ fhir:value "64292-6" ];
+       fhir:Coding.display [ fhir:value "Release of information consent" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/patient-john-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-john-smith" ];
+     fhir:Reference.display [ fhir:value "SMITH, JOHN" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2021-12-15"^^xsd:date];
+  fhir:Consent.policyRule [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes" ];
+       fhir:Coding.code [ fhir:value "CMS-9115-F.V" ];
+       fhir:Coding.display [ fhir:value "Health Information Exchange and Care Coordination Across Payers" ]
+     ]
+  ];
+  fhir:Consent.provision [
+     fhir:Consent.provision.type [ fhir:value "permit" ];
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2005-02-20"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+     ];
+     fhir:Consent.provision.provision [
+       fhir:index 0;
+       fhir:Consent.provision.type [ fhir:value "permit" ];
+       fhir:Consent.provision.period [
+         fhir:Period.start [ fhir:value "2005-02-20"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+       ];
+       fhir:Consent.provision.actor [
+         fhir:index 0;
+         fhir:Consent.provision.actor.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype" ];
+             fhir:Coding.code [ fhir:value "WIFE" ];
+             fhir:Coding.display [ fhir:value "wife" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "wife" ]
+         ];
+         fhir:Consent.provision.actor.reference [
+           fhir:link <http://mehi-ig.tranquildata.com/RelatedPerson/related-person-jane-smith-wife>;
+           fhir:Reference.reference [ fhir:value "RelatedPerson/related-person-jane-smith-wife" ];
+           fhir:Reference.display [ fhir:value "Jane Smith" ]
+         ]
+       ];
+       fhir:Consent.provision.action [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+           fhir:Coding.code [ fhir:value "access" ];
+           fhir:Coding.display [ fhir:value "Access" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Access" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Consent.provision.type [ fhir:value "permit" ];
+       fhir:Consent.provision.period [
+         fhir:Period.start [ fhir:value "2005-02-20"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+       ];
+       fhir:Consent.provision.actor [
+         fhir:index 0;
+         fhir:Consent.provision.actor.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype" ];
+             fhir:Coding.code [ fhir:value "DAU" ];
+             fhir:Coding.display [ fhir:value "daughter" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "daughter" ]
+         ];
+         fhir:Consent.provision.actor.reference [
+           fhir:link <http://mehi-ig.tranquildata.com/RelatedPerson/related-person-jennifer-smith-daughter>;
+           fhir:Reference.reference [ fhir:value "RelatedPerson/related-person-jennifer-smith-daughter" ];
+           fhir:Reference.display [ fhir:value "Jennifer Smith" ]
+         ]
+       ];
+       fhir:Consent.provision.action [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+           fhir:Coding.code [ fhir:value "access" ];
+           fhir:Coding.display [ fhir:value "Access" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Access" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Consent.provision.type [ fhir:value "permit" ];
+       fhir:Consent.provision.period [
+         fhir:Period.start [ fhir:value "2005-02-20"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+       ];
+       fhir:Consent.provision.actor [
+         fhir:index 0;
+         fhir:Consent.provision.actor.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+             fhir:Coding.code [ fhir:value "prov" ];
+             fhir:Coding.display [ fhir:value "Healthcare Provider" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "Healthcare Provider" ]
+         ];
+         fhir:Consent.provision.actor.reference [
+           fhir:link <http://mehi-ig.tranquildata.com/Organization/org-plentyrx>;
+           fhir:Reference.reference [ fhir:value "Organization/org-plentyrx" ];
+           fhir:Reference.display [ fhir:value "Plenty RX" ]
+         ]
+       ];
+       fhir:Consent.provision.action [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+           fhir:Coding.code [ fhir:value "access" ];
+           fhir:Coding.display [ fhir:value "Access" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Access" ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:Consent.provision.type [ fhir:value "permit" ];
+       fhir:Consent.provision.period [
+         fhir:Period.start [ fhir:value "2005-02-20"^^xsd:date ];
+         fhir:Period.end [ fhir:value "2020-06-01"^^xsd:date ]
+       ];
+       fhir:Consent.provision.actor [
+         fhir:index 0;
+         fhir:Consent.provision.actor.role [
+           fhir:CodeableConcept.coding [
+             fhir:index 0;
+             fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/organization-type" ];
+             fhir:Coding.code [ fhir:value "prov" ];
+             fhir:Coding.display [ fhir:value "Healthcare Provider" ]
+           ], [
+             fhir:index 1;
+             fhir:Coding.system [ fhir:value "http://dicom.nema.org/resources/ontology/DCM" ];
+             fhir:Coding.code [ fhir:value "110150" ];
+             fhir:Coding.display [ fhir:value "Application" ]
+           ];
+           fhir:CodeableConcept.text [ fhir:value "Healthcare Provider" ]
+         ];
+         fhir:Consent.provision.actor.reference [
+           fhir:link <http://mehi-ig.tranquildata.com/Organization/org-together-health>;
+           fhir:Reference.reference [ fhir:value "Organization/org-together-health" ];
+           fhir:Reference.display [ fhir:value "Together Health" ]
+         ]
+       ];
+       fhir:Consent.provision.action [
+         fhir:index 0;
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+           fhir:Coding.code [ fhir:value "access" ];
+           fhir:Coding.display [ fhir:value "Access" ]
+         ];
+         fhir:CodeableConcept.text [ fhir:value "Access" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/example2.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

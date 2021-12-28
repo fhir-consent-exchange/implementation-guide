@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="ConsentExchangeRelationships"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td></tr></table></div>
+  </text>
+  <url value="http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships"/>
+  <version value="0.5.4"/>
+  <name value="ConsentExchangeRelationships"/>
+  <title value="ConsentExchangeRelationships"/>
+  <status value="active"/>
+  <date value="2021-12-27T11:26:17-06:00"/>
+  <publisher value="MITRE, Inc"/>
+  <contact>
+    <name value="MITRE, Inc"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/mehi/implementation-guide"/>
+    </telecom>
+  </contact>
+  <description value="Relationships used to model and exchange consent relationships"/>
+  <content value="complete"/>
+</CodeSystem>

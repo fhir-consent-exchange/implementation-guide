@@ -1,0 +1,375 @@
+{
+  "ImplementationGuide/mehi.ig.fhir": {
+    "history": false,
+    "index": 0,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/ImplementationGuide-mehi.ig.fhir.json",
+    "url": "http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir",
+    "name": "MeHIImplementationGuide",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colsd",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Draft"
+    }
+  },
+  "StructureDefinition/consent-exchange-careteam": {
+    "history": false,
+    "index": 1,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-careteam.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-careteam",
+    "name": "ConsentExchangeCareTeam",
+    "title": "ConsentExchangeCareTeam",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/consent-exchange-consent": {
+    "history": false,
+    "index": 2,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-consent.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-consent",
+    "name": "ConsentExchangeConsent",
+    "title": "ConsentExchangeConsent",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/consent-exchange-organization": {
+    "history": false,
+    "index": 3,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-organization.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-organization",
+    "name": "ConsentExchangeOrganization",
+    "title": "ConsentExchangeOrganization",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/consent-exchange-patient": {
+    "history": false,
+    "index": 4,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-patient.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient",
+    "name": "ConsentExchangePatient",
+    "title": "ConsentExchangePatient",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/consent-exchange-practitioner": {
+    "history": false,
+    "index": 5,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-practitioner.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-practitioner",
+    "name": "ConsentExchangePractitioner",
+    "title": "ConsentExchangePractitioner",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "StructureDefinition/consent-exchange-related-person": {
+    "history": false,
+    "index": 6,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/structuredefinition-consent-exchange-related-person.json",
+    "url": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person",
+    "name": "ConsentExchangeRelatedPerson",
+    "title": "ConsentExchangeRelatedPerson",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "ValueSet/consent-exchange-category-codes": {
+    "history": false,
+    "index": 7,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-consent-exchange-category-codes.json",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/consent-exchange-category-codes",
+    "name": "ConsentExchangeCategoryCodes",
+    "title": "ConsentExchangeCategoryCodes",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "ValueSet/ConsentExchangePolicies": {
+    "history": false,
+    "index": 8,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-ConsentExchangePolicies.json",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies",
+    "name": "ConsentExchangePolicies",
+    "title": "ConsentExchangePolicies",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "ValueSet/ConsentExchangeRelations": {
+    "history": false,
+    "index": 9,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-ConsentExchangeRelations.json",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangeRelations",
+    "name": "ConsentExchangeRelations",
+    "title": "ConsentExchangeRelations",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "ValueSet/consent-exchange-scope-codes": {
+    "history": false,
+    "index": 10,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/valueset-consent-exchange-scope-codes.json",
+    "url": "http://mehi-ig.tranquildata.com/ValueSet/consent-exchange-scope-codes",
+    "name": "ConsentExchangeScopeCodes",
+    "title": "ConsentExchangeScopeCodes",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/CmsInteroperabilityPolicyCodes": {
+    "history": false,
+    "index": 11,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-CmsInteroperabilityPolicyCodes.json",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes",
+    "name": "CmsInteroperabilityPolicyCodes",
+    "title": "CmsInteroperabilityPolicyCodes",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/ConsentExchangeRelationships": {
+    "history": false,
+    "index": 12,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-ConsentExchangeRelationships.json",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships",
+    "name": "ConsentExchangeRelationships",
+    "title": "ConsentExchangeRelationships",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "CodeSystem/PayorToPayorExchangePolicyCodes": {
+    "history": false,
+    "index": 13,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/codesystem-PayorToPayorExchangePolicyCodes.json",
+    "url": "http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes",
+    "name": "PayorToPayorExchangePolicyCodes",
+    "title": "PayorToPayorExchangePolicyCodes",
+    "version": "0.5.4",
+    "date": "2021-12-27T11:26:17-06:00",
+    "status": {
+      "class": "colstu",
+      "owner": "MITRE, Inc",
+      "link": "https://github.com/mehi/implementation-guide",
+      "status": "Active"
+    }
+  },
+  "Bundle/Jennifer-Consents-MA": {
+    "history": false,
+    "index": 14,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/bundle-Jennifer-Consents-MA.json"
+  },
+  "Consent/Jennifer-MA-Rollup": {
+    "history": false,
+    "index": 15,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-Jennifer-MA-Rollup.json"
+  },
+  "Medication/estrodiol-contraceptive": {
+    "history": false,
+    "index": 16,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medication-estrodiol-contraceptive.json"
+  },
+  "Consent/example1": {
+    "history": false,
+    "index": 17,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-example1.json"
+  },
+  "Consent/example2": {
+    "history": false,
+    "index": 18,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-example2.json"
+  },
+  "Patient/jane-doe": {
+    "history": false,
+    "index": 19,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-jane-doe.json"
+  },
+  "Patient/jennifer-smith": {
+    "history": false,
+    "index": 20,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-jennifer-smith.json"
+  },
+  "Consent/jennifersmith-al-1": {
+    "history": false,
+    "index": 21,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-al-1.json"
+  },
+  "Consent/jennifersmith-ma-1": {
+    "history": false,
+    "index": 22,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-ma-1.json"
+  },
+  "Consent/jennifersmith-ma-2": {
+    "history": false,
+    "index": 23,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-jennifersmith-ma-2.json"
+  },
+  "Consent/johnsmith-consent-mass-community-insurance": {
+    "history": false,
+    "index": 24,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-mass-community-insurance.json"
+  },
+  "Consent/johnsmith-consent-org-acme-insurance": {
+    "history": false,
+    "index": 25,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-org-acme-insurance.json"
+  },
+  "Consent/johnsmith-consent-org-pillbox": {
+    "history": false,
+    "index": 26,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-org-pillbox.json"
+  },
+  "Consent/johnsmith-consent-plentyrx": {
+    "history": false,
+    "index": 27,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-plentyrx.json"
+  },
+  "Consent/johnsmith-consent-plentyrx-revoke": {
+    "history": false,
+    "index": 28,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/consent-johnsmith-consent-plentyrx-revoke.json"
+  },
+  "MedicationRequest/medreq-1234557": {
+    "history": false,
+    "index": 29,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medicationrequest-medreq-1234557.json"
+  },
+  "MedicationRequest/medreq-22348957": {
+    "history": false,
+    "index": 30,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/medicationrequest-medreq-22348957.json"
+  },
+  "Organization/org-acme-insurance": {
+    "history": false,
+    "index": 31,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-acme-insurance.json"
+  },
+  "Organization/org-mass-community-insurance": {
+    "history": false,
+    "index": 32,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-mass-community-insurance.json"
+  },
+  "Organization/org-pillbox": {
+    "history": false,
+    "index": 33,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-pillbox.json"
+  },
+  "Organization/org-plentyrx": {
+    "history": false,
+    "index": 34,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-plentyrx.json"
+  },
+  "Organization/org-together-health": {
+    "history": false,
+    "index": 35,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/organization-org-together-health.json"
+  },
+  "Patient/patient-john-smith": {
+    "history": false,
+    "index": 36,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/patient-patient-john-smith.json"
+  },
+  "Practitioner/practitioner-alice-yin": {
+    "history": false,
+    "index": 37,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/practitioner-practitioner-alice-yin.json"
+  },
+  "Practitioner/practitioner-bernard-shuman": {
+    "history": false,
+    "index": 38,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/practitioner-practitioner-bernard-shuman.json"
+  },
+  "RelatedPerson/related-person-jane-smith": {
+    "history": false,
+    "index": 39,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jane-smith.json"
+  },
+  "RelatedPerson/related-person-jane-smith-wife": {
+    "history": false,
+    "index": 40,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jane-smith-wife.json"
+  },
+  "RelatedPerson/related-person-jennifer-smith-daughter": {
+    "history": false,
+    "index": 41,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-jennifer-smith-daughter.json"
+  },
+  "RelatedPerson/related-person-john-smith": {
+    "history": false,
+    "index": 42,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-related-person-john-smith.json"
+  },
+  "RelatedPerson/stranger-001": {
+    "history": false,
+    "index": 43,
+    "source": "/Users/awatson/Code/mehi-consent-exchange/implementation-guide/fsh-generated/resources/relatedperson-stranger-001.json"
+  }
+}

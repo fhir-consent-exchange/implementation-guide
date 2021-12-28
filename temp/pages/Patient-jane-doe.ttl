@@ -1,0 +1,123 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Patient/jane-doe> a fhir:Patient;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "jane-doe"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2020-09-13T12:21:34.589+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "#mehi-consent-engine-reference-implementation" ];
+     fhir:Meta.profile [
+       fhir:value "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient";
+       fhir:index 0;
+       fhir:link <http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient>
+     ], [
+       fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient";
+       fhir:index 1;
+       fhir:link <http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 1002-5}\">American Indian or Alaska Native</span></p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title=\"{http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity 2186-5}\">Non Hispanic or Latino</span></p><p><b>value</b>: Non Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>identifier</b>: Medical Record Number: 1042001 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: JANE DOE </p><p><b>telecom</b>: ph: 747-555-7474(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2001-01-15</p><p><b>generalPractitioner</b>: <a href=\"Practitioner-practitioner-alice-yin.html\">Dr. Alice Yin. Generated Summary: active; ALICE YIN ; Phone: 555-555-8818; gender: female; birthDate: 1972-09-04</a></p><p><b>managingOrganization</b>: <a href=\"Organization-org-together-health.html\">Together Health. Generated Summary: active; name: Together Health</a></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "2106-3" ];
+         fhir:Coding.display [ fhir:value "White" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "urn:oid:2.16.840.1.113883.6.238" ];
+         fhir:Coding.code [ fhir:value "1002-5" ];
+         fhir:Coding.display [ fhir:value "American Indian or Alaska Native" ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:Extension.url [ fhir:value "ombCategory" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "ombCategory" ];
+       fhir:Extension.valueCoding [
+         fhir:Coding.system [ fhir:value "http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity" ];
+         fhir:Coding.code [ fhir:value "2186-5" ];
+         fhir:Coding.display [ fhir:value "Non Hispanic or Latino" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Extension.url [ fhir:value "detailed" ];
+       fhir:Extension.valueString [ fhir:value "Non Hispanic or Latino" ]
+     ];
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity" ]
+  ], [
+     fhir:index 2;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex" ];
+     fhir:Extension.valueCode [ fhir:value "F" ]
+  ];
+  fhir:Patient.identifier [
+     fhir:index 0;
+     fhir:Identifier.use [ fhir:value "usual" ];
+     fhir:Identifier.type [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v2-0203" ];
+         fhir:Coding.code [ fhir:value "MR" ];
+         fhir:Coding.display [ fhir:value "Medical Record Number" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Medical Record Number" ]
+     ];
+     fhir:Identifier.system [ fhir:value "http://hospital.smarthealthit.org" ];
+     fhir:Identifier.value [ fhir:value "1042001" ]
+  ];
+  fhir:Patient.active [ fhir:value "true"^^xsd:boolean];
+  fhir:Patient.name [
+     fhir:index 0;
+     fhir:HumanName.family [ fhir:value "DOE" ];
+     fhir:HumanName.given [
+       fhir:value "JANE";
+       fhir:index 0
+     ]
+  ];
+  fhir:Patient.telecom [
+     fhir:index 0;
+     fhir:ContactPoint.system [ fhir:value "phone" ];
+     fhir:ContactPoint.value [ fhir:value "747-555-7474" ];
+     fhir:ContactPoint.use [ fhir:value "home" ]
+  ];
+  fhir:Patient.gender [ fhir:value "female"];
+  fhir:Patient.birthDate [ fhir:value "2001-01-15"^^xsd:date];
+  fhir:Patient.generalPractitioner [
+     fhir:index 0;
+     fhir:link <http://mehi-ig.tranquildata.com/Practitioner/practitioner-alice-yin>;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-alice-yin" ];
+     fhir:Reference.display [ fhir:value "Dr. Alice Yin" ]
+  ];
+  fhir:Patient.managingOrganization [
+     fhir:link <http://mehi-ig.tranquildata.com/Organization/org-together-health>;
+     fhir:Reference.reference [ fhir:value "Organization/org-together-health" ];
+     fhir:Reference.display [ fhir:value "Together Health" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Patient/jane-doe.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,22 @@
+﻿<html>
+<head>
+  <title>Patient-jane-doe-validation</title>
+  <link rel="stylesheet" href="fhir.css"/>
+</head>
+<body>
+<table class="grid">
+<tr><td><b>Level</b></td><td><b>Type</b></td><td><b>Location</b></td><td><b>Message</b></td></tr>
+<tr><td>error</td><td>structure</td><td>Patient/jane-doe: Patient.extension[0]</td><td>Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)</td><td></td></tr>
+<tr><td>error</td><td>invariant</td><td>Patient/jane-doe: Patient.extension[0].extension[2]</td><td>ext-1: 'Must have either extensions or value[x], not both' Rule 'Must have either extensions or value[x], not both' Failed</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>Patient/jane-doe: Patient.extension[0].extension[2]</td><td>Extension.extension:ombCategory.value[x]: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>Patient/jane-doe: Patient.extension[0].extension[2]</td><td>Extension.extension:ombCategory.value[x]:valueCoding: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-race)</td><td></td></tr>
+<tr><td>error</td><td>structure</td><td>Patient/jane-doe: Patient.extension[1]</td><td>Extension.extension:text: minimum required = 1, but only found 0 (from http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity)</td><td></td></tr>
+<tr><td>error</td><td>code-invalid</td><td>Patient/jane-doe: Patient.extension[1].extension[0].value.ofType(Coding)</td><td>Unknown Code System 'http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity'</td><td></td></tr>
+<tr><td>error</td><td>invalid</td><td>Patient/jane-doe: Patient.extension[1].extension[0].value.ofType(Coding).system</td><td>URL value 'http://hl7.org/fhir/us/core/ValueSet/omb-ethnicity' does not resolve</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Patient/jane-doe: Patient</td><td>Validate resource against profile http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/jane-doe: Patient.extension[0].extension[0].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>unknown</td><td>Patient/jane-doe: Patient.extension[0].extension[1].value.ofType(Coding)</td><td>Code System URI 'urn:oid:2.16.840.1.113883.6.238' is unknown so the code cannot be validated</td><td></td></tr>
+<tr><td>information</td><td>informational</td><td>Patient/jane-doe: Patient</td><td>Validate resource against profile http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient (per meta)</td><td></td></tr>
+</table>
+</body>
+</html>

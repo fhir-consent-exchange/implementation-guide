@@ -1,0 +1,1354 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "Bundle-Scenario-1",
+  "type" : "searchset",
+  "total" : 24,
+  "entry" : [
+    {
+      "fullUrl" : "Composition/5kNfFPZMNrWuF6rcn",
+      "resource" : {
+        "resourceType" : "Composition",
+        "id" : "Inline-Instance-for-Bundle-Scenario-1",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: preliminary</p><p><b>type</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/doc-typecodes 11503-0}\">Medical records</span></p><p><b>date</b>: 2021-10-30</p><p><b>author</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Practitioner/system/expansion\">System</a></p><p><b>title</b>: Continuity of Care Document</p><p><b>confidentiality</b>: 0</p></div>"
+        },
+        "status" : "preliminary",
+        "type" : {
+          "coding" : [
+            {
+              "system" : "http://hl7.org/fhir/CodeSystem/doc-typecodes",
+              "code" : "11503-0",
+              "display" : "Medical records"
+            }
+          ]
+        },
+        "date" : "2021-10-30",
+        "author" : [
+          {
+            "reference" : "Practitioner/system",
+            "display" : "System"
+          }
+        ],
+        "title" : "Continuity of Care Document",
+        "confidentiality" : "0",
+        "section" : [
+          {
+            "entry" : [
+              {
+                "reference" : "Consent/related-person-john-smith"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Consent/jennifersmith-al-1"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Consent/jennifersmith-ma-2"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Consent/jennifersmith-ma-1"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Device/org-together-health"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Medication/estrodiol"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/f8c6df10-5a45-3758-abe9-1d8065a35de8"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/205d4dac-abf1-32cf-b9e1-91f17f9c5fec"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/56dea1ac-0aaf-378c-9111-efecdd362186"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/07345d50-e2dd-3d7d-8cf4-bbb740989b68"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/8cf132db-f62f-3567-b7eb-48d4f9ad2d8a"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/dc1a3bcd-37ba-3b9d-9115-1ec6afb264e4"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/f8c6df10-5a45-3758-abe9-1d8065a35de8"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/205d4dac-abf1-32cf-b9e1-91f17f9c5fec"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/56dea1ac-0aaf-378c-9111-efecdd362186"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/07345d50-e2dd-3d7d-8cf4-bbb740989b68"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/8cf132db-f62f-3567-b7eb-48d4f9ad2d8a"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/dc1a3bcd-37ba-3b9d-9115-1ec6afb264e4"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Organization/org-together-health"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Patient/jennifer-smith"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Practitioner/practitioner-alice-yin"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "Practitioner/practitioner-bernard-shuman"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "RelatedPerson/related-person-john-smith"
+              }
+            ]
+          },
+          {
+            "entry" : [
+              {
+                "reference" : "RelatedPerson/related-person-jane-smith"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "Consent/related-person-john-smith",
+      "resource" : {
+        "resourceType" : "RelatedPerson",
+        "id" : "related-person-john-smith",
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2184-0}\">Dominican</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2148-5}\">Mexican</span></p><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: M</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">Jennifer Smith. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype FTH}\">father</span>, <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships Parent}\">Parent</span></p><p><b>name</b>: JOHN SMITH </p><p><b>telecom</b>: ph: 555-555-5553(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1980-04-14</p><p><b>address</b>: </p><ul><li>49 Meadow St Birmingham AL 35242 US </li><li>183 Harbor View St Boston MA 02101 US </li></ul></div>"
+        },
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2106-3",
+                  "display" : "White"
+                }
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2135-2",
+                  "display" : "Hispanic or Latino"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2184-0",
+                  "display" : "Dominican"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2148-5",
+                  "display" : "Mexican"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Hispanic or Latino"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode" : "M"
+          }
+        ],
+        "active" : true,
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "Jennifer Smith"
+        },
+        "relationship" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+                "code" : "FTH",
+                "display" : "father"
+              }
+            ],
+            "text" : "father"
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships",
+                "code" : "Parent",
+                "display" : "Parent"
+              }
+            ],
+            "text" : "Parent"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "SMITH",
+            "given" : [
+              "JOHN"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-5553",
+            "use" : "home"
+          }
+        ],
+        "gender" : "male",
+        "birthDate" : "1980-04-14",
+        "address" : [
+          {
+            "line" : [
+              "49 Meadow St"
+            ],
+            "city" : "Birmingham",
+            "state" : "AL",
+            "postalCode" : "35242",
+            "country" : "US",
+            "period" : {
+              "start" : "2005-02-20",
+              "end" : "2020-06-01"
+            }
+          },
+          {
+            "line" : [
+              "183 Harbor View St"
+            ],
+            "city" : "Boston",
+            "state" : "MA",
+            "postalCode" : "02101",
+            "country" : "US",
+            "period" : {
+              "start" : "2020-06-15"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "Consent/jennifersmith-al-1",
+      "resource" : {
+        "resourceType" : "Consent",
+        "id" : "jennifersmith-al-1",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2017-04-17T00:00:00.0000+00:00",
+          "source" : "node-on-fhir.mitre.org#mehi-consent-engine",
+          "profile" : [
+            "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\">information disclosure</span></p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>dateTime</b>: 2017-04-17</p><p><b>organization</b>: <a href=\"#Organization_org-together-health\">Together Health. Generated Summary: active; name: Together Health</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2017-04-17 --&gt; (ongoing)</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></p><p><b>reference</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-bernard-shuman/expansion\">SHUMAN, BERNARD</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></p><p><b>reference</b>: <a href=\"#RelatedPerson_related-person-jane-smith\">SMITH, JANE. Generated Summary: active; <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype MTH}\">mother</span>, <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships Parent}\">Parent</span>; JANE SMITH ; Phone: 555-555-5554; gender: female; birthDate: 1981-01-10</a></p></blockquote><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction collect}\">Collect</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction correct}\">Access and Correct</span></p></blockquote></div>"
+        },
+        "status" : "active",
+        "scope" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code" : "patient-privacy",
+              "display" : "Privacy Consent"
+            }
+          ]
+        },
+        "category" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code" : "IDSCL",
+                "display" : "information disclosure"
+              }
+            ]
+          }
+        ],
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "SMITH, JENNIFER"
+        },
+        "dateTime" : "2017-04-17",
+        "organization" : [
+          {
+            "reference" : "Organization/org-together-health",
+            "display" : "Together Health"
+          }
+        ],
+        "policyRule" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+              "code" : "hipaa-auth",
+              "display" : "HIPAA Authorization"
+            }
+          ]
+        },
+        "provision" : {
+          "type" : "permit",
+          "period" : {
+            "start" : "2017-04-17"
+          },
+          "actor" : [
+            {
+              "role" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+                    "code" : "EVTWIT",
+                    "display" : "Event Witness"
+                  }
+                ]
+              },
+              "reference" : {
+                "reference" : "Pracitioner/practitioner-bernard-shuman",
+                "display" : "SHUMAN, BERNARD"
+              }
+            },
+            {
+              "role" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+                    "code" : "EVTWIT",
+                    "display" : "Event Witness"
+                  }
+                ]
+              },
+              "reference" : {
+                "reference" : "RelatedPerson/related-person-jane-smith",
+                "display" : "SMITH, JANE"
+              }
+            }
+          ],
+          "action" : [
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "collect",
+                  "display" : "Collect"
+                }
+              ],
+              "text" : "Collect"
+            },
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "access",
+                  "display" : "Access"
+                }
+              ],
+              "text" : "Access"
+            },
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "correct",
+                  "display" : "Access and Correct"
+                }
+              ],
+              "text" : "Access and Correct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl" : "Consent/jennifersmith-ma-2",
+      "resource" : {
+        "resourceType" : "Consent",
+        "id" : "jennifersmith-ma-2",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2021-09-01T00:00:00.0000+00:00",
+          "source" : "node-on-fhir.mitre.org#mehi-consent-engine",
+          "profile" : [
+            "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\">information disclosure</span></p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>dateTime</b>: 2021-09-02</p><p><b>organization</b>: <a href=\"#Organization_org-together-health\">Together Health. Generated Summary: active; name: Together Health</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-01-01 --&gt; (ongoing)</p><h3>Actors</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></td><td><a href=\"#RelatedPerson_related-person-jane-smith\">See above (RelatedPerson/related-person-jane-smith)</a></td></tr></table><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote></div>"
+        },
+        "status" : "active",
+        "scope" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code" : "patient-privacy",
+              "display" : "Privacy Consent"
+            }
+          ]
+        },
+        "category" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code" : "IDSCL",
+                "display" : "information disclosure"
+              }
+            ]
+          }
+        ],
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "SMITH, JENNIFER"
+        },
+        "dateTime" : "2021-09-02",
+        "organization" : [
+          {
+            "reference" : "Organization/org-together-health",
+            "display" : "Together Health"
+          }
+        ],
+        "policyRule" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+              "code" : "hipaa-auth",
+              "display" : "HIPAA Authorization"
+            }
+          ]
+        },
+        "provision" : {
+          "type" : "permit",
+          "period" : {
+            "start" : "2021-01-01"
+          },
+          "actor" : [
+            {
+              "role" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+                    "code" : "EVTWIT",
+                    "display" : "Event Witness"
+                  }
+                ]
+              },
+              "reference" : {
+                "reference" : "RelatedPerson/related-person-jane-smith"
+              }
+            }
+          ],
+          "action" : [
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "access",
+                  "display" : "Access"
+                }
+              ],
+              "text" : "Access"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl" : "Consent/jennifersmith-ma-1",
+      "resource" : {
+        "resourceType" : "Consent",
+        "id" : "jennifersmith-ma-1",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2021-09-01T00:00:00.0000+00:00",
+          "source" : "node-on-fhir.mitre.org#mehi-consent-engine",
+          "profile" : [
+            "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\">information disclosure</span></p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>dateTime</b>: 2021-09-01</p><p><b>organization</b>: <a href=\"#Organization_org-together-health\">Together Health. Generated Summary: active; name: Together Health</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-09-02 --&gt; (ongoing)</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></p><p><b>reference</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-alice-yin/expansion\">Pracitioner/practitioner-alice-yin</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes VALID}\">Validator</span></p><p><b>reference</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-alice-yin/expansion\">Pracitioner/practitioner-alice-yin</a></p></blockquote><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction collect}\">Collect</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction correct}\">Access and Correct</span></p></blockquote></div>"
+        },
+        "status" : "active",
+        "scope" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentscope",
+              "code" : "patient-privacy",
+              "display" : "Privacy Consent"
+            }
+          ]
+        },
+        "category" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-ActCode",
+                "code" : "IDSCL",
+                "display" : "information disclosure"
+              }
+            ]
+          }
+        ],
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "SMITH, JENNIFER"
+        },
+        "dateTime" : "2021-09-01",
+        "organization" : [
+          {
+            "reference" : "Organization/org-together-health",
+            "display" : "Together Health"
+          }
+        ],
+        "policyRule" : {
+          "coding" : [
+            {
+              "system" : "http://terminology.hl7.org/CodeSystem/consentpolicycodes",
+              "code" : "hipaa-auth",
+              "display" : "HIPAA Authorization"
+            }
+          ]
+        },
+        "provision" : {
+          "type" : "permit",
+          "period" : {
+            "start" : "2021-09-02"
+          },
+          "actor" : [
+            {
+              "role" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+                    "code" : "EVTWIT",
+                    "display" : "Event Witness"
+                  }
+                ]
+              },
+              "reference" : {
+                "reference" : "Pracitioner/practitioner-alice-yin"
+              }
+            },
+            {
+              "role" : {
+                "coding" : [
+                  {
+                    "system" : "http://terminology.hl7.org/CodeSystem/contractsignertypecodes",
+                    "code" : "VALID",
+                    "display" : "Validator"
+                  }
+                ]
+              },
+              "reference" : {
+                "reference" : "Pracitioner/practitioner-alice-yin"
+              }
+            }
+          ],
+          "action" : [
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "collect",
+                  "display" : "Collect"
+                }
+              ],
+              "text" : "Collect"
+            },
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "access",
+                  "display" : "Access"
+                }
+              ],
+              "text" : "Access"
+            },
+            {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/consentaction",
+                  "code" : "correct",
+                  "display" : "Access and Correct"
+                }
+              ],
+              "text" : "Access and Correct"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fullUrl" : "Device/org-together-health",
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "org-together-health",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2021-09-13T00:00:00.0000+00:00",
+          "profile" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: Together Health</p><p><b>address</b>: 132th St, Underland Park, KS 66223</p></div>"
+        },
+        "active" : true,
+        "name" : "Together Health",
+        "address" : [
+          {
+            "text" : "132th St, Underland Park, KS 66223",
+            "line" : [
+              "132th Street,"
+            ],
+            "city" : "Underland Park",
+            "state" : "KS",
+            "postalCode" : "66223"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "Medication/estrodiol-contraceptive",
+      "resource" : {
+        "resourceType" : "Medication",
+        "id" : "estrodiol-contraceptive",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>form</b>: <span title=\"Codes: {http://snomed.info/sct 385055001}\">Tablet dose form (qualifier value)</span></p><h3>Ingredients</h3><table class=\"grid\"><tr><td>-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://www.nlm.nih.gov/research/umls/rxnorm 24395}\">Estradiol valerate</span></td><td>2 mg/1 TAB</td></tr></table></div>"
+        },
+        "status" : "active",
+        "form" : {
+          "coding" : [
+            {
+              "system" : "http://snomed.info/sct",
+              "code" : "385055001",
+              "display" : "Tablet dose form (qualifier value)"
+            }
+          ]
+        },
+        "ingredient" : [
+          {
+            "itemCodeableConcept" : {
+              "coding" : [
+                {
+                  "system" : "http://www.nlm.nih.gov/research/umls/rxnorm",
+                  "code" : "24395",
+                  "display" : "Estradiol valerate"
+                }
+              ]
+            },
+            "strength" : {
+              "numerator" : {
+                "value" : 2,
+                "system" : "http://unitsofmeasure.org",
+                "code" : "mg"
+              },
+              "denominator" : {
+                "value" : 1,
+                "system" : "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm",
+                "code" : "TAB"
+              }
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "Organization/org-together-health",
+      "resource" : {
+        "resourceType" : "Organization",
+        "id" : "org-together-health",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2021-09-13T00:00:00.0000+00:00",
+          "profile" : [
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+          ]
+        },
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: Together Health</p><p><b>address</b>: 132th St, Underland Park, KS 66223</p></div>"
+        },
+        "active" : true,
+        "name" : "Together Health",
+        "address" : [
+          {
+            "text" : "132th St, Underland Park, KS 66223",
+            "line" : [
+              "132th Street,"
+            ],
+            "city" : "Underland Park",
+            "state" : "KS",
+            "postalCode" : "66223"
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "Patient/jennifer-smith",
+      "resource" : {
+        "resourceType" : "Patient",
+        "id" : "jennifer-smith",
+        "meta" : {
+          "versionId" : "1",
+          "lastUpdated" : "2020-09-13T12:21:34.589+00:00",
+          "source" : "#mehi-consent-engine-reference-implementation",
+          "profile" : [
+            "http://mehi-ig.tranquildata.com/StructureDefinition/ConsentExchangePatient",
+            "http://hl7.org/fhir/us/core/StructureDefinition/us-core-patient"
+          ]
+        },
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 1002-5}\">American Indian or Alaska Native</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2028-9}\">Asian</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2036-2}\">Filipino</span></p><p><b>value</b>: Mixed</p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2184-0}\">Dominican</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2148-5}\">Mexican</span></p><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>identifier</b>: Medical Record Number: 1042501 (USUAL)</p><p><b>active</b>: true</p><p><b>name</b>: JENNIFER SMITH </p><p><b>telecom</b>: ph: 555-555-5555(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 2005-02-20</p><p><b>address</b>: </p><ul><li>49 Meadow St Birmingham AL 35242 US </li><li>183 Harbor View St Boston MA 02101 US </li></ul><p><b>generalPractitioner</b>: </p><ul><li><a href=\"#Practitioner_practitioner-alice-yin\">Dr. Alice Yin. Generated Summary: active; ALICE YIN ; Phone: 555-555-8818; gender: female; birthDate: 1972-09-04</a></li><li><a href=\"#Practitioner_practitioner-bernard-shuman\">Dr. Bernard Shuman. Generated Summary: active; BERNARD SHUMAN ; Phone: 555-555-1120; gender: male; birthDate: 1965-03-24</a></li></ul><p><b>managingOrganization</b>: <a href=\"#Organization_org-together-health\">Together Health. Generated Summary: active; name: Together Health</a></p></div>"
+        },
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2106-3",
+                  "display" : "White"
+                }
+              },
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "1002-5",
+                  "display" : "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2028-9",
+                  "display" : "Asian"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2036-2",
+                  "display" : "Filipino"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Mixed"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2135-2",
+                  "display" : "Hispanic or Latino"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2184-0",
+                  "display" : "Dominican"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2148-5",
+                  "display" : "Mexican"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Hispanic or Latino"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode" : "F"
+          }
+        ],
+        "identifier" : [
+          {
+            "use" : "usual",
+            "type" : {
+              "coding" : [
+                {
+                  "system" : "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code" : "MR",
+                  "display" : "Medical Record Number"
+                }
+              ],
+              "text" : "Medical Record Number"
+            },
+            "system" : "http://hospital.smarthealthit.org",
+            "value" : "1042501"
+          }
+        ],
+        "active" : true,
+        "name" : [
+          {
+            "family" : "SMITH",
+            "given" : [
+              "JENNIFER"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-5555",
+            "use" : "home"
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "2005-02-20",
+        "address" : [
+          {
+            "line" : [
+              "49 Meadow St"
+            ],
+            "city" : "Birmingham",
+            "state" : "AL",
+            "postalCode" : "35242",
+            "country" : "US",
+            "period" : {
+              "start" : "2005-02-20",
+              "end" : "2020-06-01"
+            }
+          },
+          {
+            "line" : [
+              "183 Harbor View St"
+            ],
+            "city" : "Boston",
+            "state" : "MA",
+            "postalCode" : "02101",
+            "country" : "US",
+            "period" : {
+              "start" : "2020-06-15"
+            }
+          }
+        ],
+        "generalPractitioner" : [
+          {
+            "reference" : "Practitioner/practitioner-alice-yin",
+            "display" : "Dr. Alice Yin"
+          },
+          {
+            "reference" : "Practitioner/practitioner-bernard-shuman",
+            "display" : "Dr. Bernard Shuman"
+          }
+        ],
+        "managingOrganization" : {
+          "reference" : "Organization/org-together-health",
+          "display" : "Together Health"
+        }
+      }
+    },
+    {
+      "fullUrl" : "Practitioner/practitioner-alice-yin",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "id" : "practitioner-alice-yin",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: ALICE YIN </p><p><b>telecom</b>: ph: 555-555-8818(HOME)</p><p><b>address</b>: 1235 Bay Ave. Boston MA 02101 US </p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1972-09-04</p></div>"
+        },
+        "active" : true,
+        "name" : [
+          {
+            "family" : "YIN",
+            "given" : [
+              "ALICE"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-8818",
+            "use" : "home"
+          }
+        ],
+        "address" : [
+          {
+            "line" : [
+              "1235 Bay Ave."
+            ],
+            "city" : "Boston",
+            "state" : "MA",
+            "postalCode" : "02101",
+            "country" : "US"
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "1972-09-04"
+      }
+    },
+    {
+      "fullUrl" : "Practitioner/practitioner-bernard-shuman",
+      "resource" : {
+        "resourceType" : "Practitioner",
+        "id" : "practitioner-bernard-shuman",
+        "text" : {
+          "status" : "generated",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: BERNARD SHUMAN </p><p><b>telecom</b>: ph: 555-555-1120(HOME)</p><p><b>address</b>: 1120 Maple St Birmingham AL 35242 US </p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1965-03-24</p></div>"
+        },
+        "active" : true,
+        "name" : [
+          {
+            "family" : "SHUMAN",
+            "given" : [
+              "BERNARD"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-1120",
+            "use" : "home"
+          }
+        ],
+        "address" : [
+          {
+            "line" : [
+              "1120 Maple St"
+            ],
+            "city" : "Birmingham",
+            "state" : "AL",
+            "postalCode" : "35242",
+            "country" : "US"
+          }
+        ],
+        "gender" : "male",
+        "birthDate" : "1965-03-24"
+      }
+    },
+    {
+      "fullUrl" : "RelatedPerson/related-person-john-smith",
+      "resource" : {
+        "resourceType" : "RelatedPerson",
+        "id" : "related-person-john-smith",
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2184-0}\">Dominican</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2148-5}\">Mexican</span></p><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: M</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">Jennifer Smith. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype FTH}\">father</span>, <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships Parent}\">Parent</span></p><p><b>name</b>: JOHN SMITH </p><p><b>telecom</b>: ph: 555-555-5553(HOME)</p><p><b>gender</b>: male</p><p><b>birthDate</b>: 1980-04-14</p><p><b>address</b>: </p><ul><li>49 Meadow St Birmingham AL 35242 US </li><li>183 Harbor View St Boston MA 02101 US </li></ul></div>"
+        },
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2106-3",
+                  "display" : "White"
+                }
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2135-2",
+                  "display" : "Hispanic or Latino"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2184-0",
+                  "display" : "Dominican"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2148-5",
+                  "display" : "Mexican"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Hispanic or Latino"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode" : "M"
+          }
+        ],
+        "active" : true,
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "Jennifer Smith"
+        },
+        "relationship" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+                "code" : "FTH",
+                "display" : "father"
+              }
+            ],
+            "text" : "father"
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships",
+                "code" : "Parent",
+                "display" : "Parent"
+              }
+            ],
+            "text" : "Parent"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "SMITH",
+            "given" : [
+              "JOHN"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-5553",
+            "use" : "home"
+          }
+        ],
+        "gender" : "male",
+        "birthDate" : "1980-04-14",
+        "address" : [
+          {
+            "line" : [
+              "49 Meadow St"
+            ],
+            "city" : "Birmingham",
+            "state" : "AL",
+            "postalCode" : "35242",
+            "country" : "US",
+            "period" : {
+              "start" : "2005-02-20",
+              "end" : "2020-06-01"
+            }
+          },
+          {
+            "line" : [
+              "183 Harbor View St"
+            ],
+            "city" : "Boston",
+            "state" : "MA",
+            "postalCode" : "02101",
+            "country" : "US",
+            "period" : {
+              "start" : "2020-06-15"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "fullUrl" : "RelatedPerson/related-person-jane-smith",
+      "resource" : {
+        "resourceType" : "RelatedPerson",
+        "id" : "related-person-jane-smith",
+        "text" : {
+          "status" : "extensions",
+          "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><blockquote><p><b>US Core Race Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2106-3}\">White</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 1002-5}\">American Indian or Alaska Native</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2028-9}\">Asian</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2036-2}\">Filipino</span></p><p><b>value</b>: Mixed</p></blockquote><blockquote><p><b>US Core Ethnicity Extension</b></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2135-2}\">Hispanic or Latino</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2184-0}\">Dominican</span></p><p><b>value</b>: <span title=\"{urn:oid:2.16.840.1.113883.6.238 2148-5}\">Mexican</span></p><p><b>value</b>: Hispanic or Latino</p></blockquote><p><b>US Core Birth Sex Extension</b>: F</p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"#Patient_jennifer-smith\">Jennifer Smith. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype MTH}\">mother</span>, <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships Parent}\">Parent</span></p><p><b>name</b>: JANE SMITH </p><p><b>telecom</b>: ph: 555-555-5554(HOME)</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1981-01-10</p><p><b>address</b>: </p><ul><li>49 Meadow St Birmingham AL 35242 US </li><li>183 Harbor View St Boston MA 02101 US </li></ul></div>"
+        },
+        "extension" : [
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2106-3",
+                  "display" : "White"
+                }
+              },
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "1002-5",
+                  "display" : "American Indian or Alaska Native"
+                }
+              },
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2028-9",
+                  "display" : "Asian"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2036-2",
+                  "display" : "Filipino"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Mixed"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-race"
+          },
+          {
+            "extension" : [
+              {
+                "url" : "ombCategory",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2135-2",
+                  "display" : "Hispanic or Latino"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2184-0",
+                  "display" : "Dominican"
+                }
+              },
+              {
+                "url" : "detailed",
+                "valueCoding" : {
+                  "system" : "urn:oid:2.16.840.1.113883.6.238",
+                  "code" : "2148-5",
+                  "display" : "Mexican"
+                }
+              },
+              {
+                "url" : "text",
+                "valueString" : "Hispanic or Latino"
+              }
+            ],
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-ethnicity"
+          },
+          {
+            "url" : "http://hl7.org/fhir/us/core/StructureDefinition/us-core-birthsex",
+            "valueCode" : "F"
+          }
+        ],
+        "active" : true,
+        "patient" : {
+          "reference" : "Patient/jennifer-smith",
+          "display" : "Jennifer Smith"
+        },
+        "relationship" : [
+          {
+            "coding" : [
+              {
+                "system" : "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+                "code" : "MTH",
+                "display" : "mother"
+              }
+            ],
+            "text" : "mother"
+          },
+          {
+            "coding" : [
+              {
+                "system" : "http://mehi-ig.tranquildata.com/CodeSystem/TranquilRelationships",
+                "code" : "Parent",
+                "display" : "Parent"
+              }
+            ],
+            "text" : "Parent"
+          }
+        ],
+        "name" : [
+          {
+            "family" : "SMITH",
+            "given" : [
+              "JANE"
+            ]
+          }
+        ],
+        "telecom" : [
+          {
+            "system" : "phone",
+            "value" : "555-555-5554",
+            "use" : "home"
+          }
+        ],
+        "gender" : "female",
+        "birthDate" : "1981-01-10",
+        "address" : [
+          {
+            "line" : [
+              "49 Meadow St"
+            ],
+            "city" : "Birmingham",
+            "state" : "AL",
+            "postalCode" : "35242",
+            "country" : "US",
+            "period" : {
+              "start" : "2005-02-20",
+              "end" : "2020-06-01"
+            }
+          },
+          {
+            "line" : [
+              "183 Harbor View St"
+            ],
+            "city" : "Boston",
+            "state" : "MA",
+            "postalCode" : "02101",
+            "country" : "US",
+            "period" : {
+              "start" : "2020-06-15"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}

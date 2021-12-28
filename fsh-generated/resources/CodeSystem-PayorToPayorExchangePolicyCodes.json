@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PayorToPayorExchangePolicyCodes",
+  "id": "PayorToPayorExchangePolicyCodes",
+  "title": "PayorToPayorExchangePolicyCodes",
+  "description": "Policy codes used to define legal frameworks under which consent exchange occurs between payors.",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes",
+  "concept": [
+    {
+      "code": "CMS-9115-P",
+      "display": "CMS Interoperability and Patient Access proposed rule"
+    },
+    {
+      "code": "CMS-9115-F",
+      "display": "CMS Interoperability and Patient Access final rule"
+    },
+    {
+      "code": "CMS-9123-P",
+      "display": "CMS Reducing Provider and Patient Burdern proposed rule"
+    },
+    {
+      "code": "CMS-9123-F",
+      "display": "CMS Reducing Provider and Patient Burdern final rule"
+    }
+  ],
+  "count": 4
+}

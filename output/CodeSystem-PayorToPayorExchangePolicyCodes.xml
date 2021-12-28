@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="PayorToPayorExchangePolicyCodes"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">CMS-9115-P<a name="PayorToPayorExchangePolicyCodes-CMS-9115-P"> </a></td><td>CMS Interoperability and Patient Access proposed rule</td></tr><tr><td style="white-space:nowrap">CMS-9115-F<a name="PayorToPayorExchangePolicyCodes-CMS-9115-F"> </a></td><td>CMS Interoperability and Patient Access final rule</td></tr><tr><td style="white-space:nowrap">CMS-9123-P<a name="PayorToPayorExchangePolicyCodes-CMS-9123-P"> </a></td><td>CMS Reducing Provider and Patient Burdern proposed rule</td></tr><tr><td style="white-space:nowrap">CMS-9123-F<a name="PayorToPayorExchangePolicyCodes-CMS-9123-F"> </a></td><td>CMS Reducing Provider and Patient Burdern final rule</td></tr></table></div>
+  </text>
+  <url value="http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes"/>
+  <version value="0.5.4"/>
+  <name value="PayorToPayorExchangePolicyCodes"/>
+  <title value="PayorToPayorExchangePolicyCodes"/>
+  <status value="active"/>
+  <date value="2021-12-27T11:26:17-06:00"/>
+  <publisher value="MITRE, Inc"/>
+  <contact>
+    <name value="MITRE, Inc"/>
+    <telecom>
+      <system value="url"/>
+      <value value="https://github.com/mehi/implementation-guide"/>
+    </telecom>
+  </contact>
+  <description value="Policy codes used to define legal frameworks under which consent exchange occurs between payors."/>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="CMS-9115-P"/>
+    <display value="CMS Interoperability and Patient Access proposed rule"/>
+  </concept>
+  <concept>
+    <code value="CMS-9115-F"/>
+    <display value="CMS Interoperability and Patient Access final rule"/>
+  </concept>
+  <concept>
+    <code value="CMS-9123-P"/>
+    <display value="CMS Reducing Provider and Patient Burdern proposed rule"/>
+  </concept>
+  <concept>
+    <code value="CMS-9123-F"/>
+    <display value="CMS Reducing Provider and Patient Burdern final rule"/>
+  </concept>
+</CodeSystem>

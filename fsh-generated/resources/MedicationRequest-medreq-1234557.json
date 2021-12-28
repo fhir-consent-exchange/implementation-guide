@@ -1,0 +1,19 @@
+{
+  "resourceType": "MedicationRequest",
+  "id": "medreq-1234557",
+  "status": "active",
+  "intent": "plan",
+  "subject": {
+    "reference": "Patient/jennifer-smith",
+    "display": "SMITH, JENNIFER"
+  },
+  "authoredOn": "2017-04-17",
+  "requester": {
+    "reference": "Practitioner/practitioner-bernard-shuman",
+    "display": "SHUMAN, BERNARD"
+  },
+  "medicationReference": {
+    "reference": "Medication/estrodiol-contraceptive",
+    "display": "Estradiol"
+  }
+}

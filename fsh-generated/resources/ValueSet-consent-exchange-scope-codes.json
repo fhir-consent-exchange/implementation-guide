@@ -1,0 +1,32 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ConsentExchangeScopeCodes",
+  "id": "consent-exchange-scope-codes",
+  "title": "ConsentExchangeScopeCodes",
+  "description": "Consent Exchange - Scope Codes",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/ValueSet/consent-exchange-scope-codes",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://terminology.hl7.org/ValueSet/consent-scope"
+        ]
+      }
+    ],
+    "exclude": [
+      {
+        "system": "http://terminology.hl7.org/CodeSystem/consentscope",
+        "concept": [
+          {
+            "code": "research"
+          },
+          {
+            "code": "treatment"
+          }
+        ]
+      }
+    ]
+  }
+}

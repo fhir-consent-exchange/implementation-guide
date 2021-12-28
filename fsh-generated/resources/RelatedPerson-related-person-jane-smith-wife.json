@@ -1,0 +1,50 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "related-person-jane-smith-wife",
+  "meta": {
+    "profile": [
+      "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"
+    ]
+  },
+  "text": {
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion\">John Smith</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype WIFE}\">wife</span>, <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Spouse}\">Spouse</span></p><p><b>name</b>: JANE SMITH</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1981-01-10</p></div>",
+    "status": "generated"
+  },
+  "active": true,
+  "name": [
+    {
+      "family": "SMITH",
+      "given": [
+        "JANE"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1981-01-10",
+  "patient": {
+    "reference": "Patient/john-smith",
+    "display": "John Smith"
+  },
+  "relationship": [
+    {
+      "text": "wife",
+      "coding": [
+        {
+          "code": "WIFE",
+          "system": "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+          "display": "wife"
+        }
+      ]
+    },
+    {
+      "text": "Spouse",
+      "coding": [
+        {
+          "code": "Spouse",
+          "system": "http://hl7.org/fhir/CodeSystem/consent-exchange-relationships",
+          "display": "Spouse"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/example1> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example1"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Patient Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes 64292-6}\">Release of information consent</span></p><p><b>patient</b>: <a href=\"Patient-patient-john-smith.html\">SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14</a></p><p><b>dateTime</b>: 2021-06-01</p><p><b>organization</b>: <a href=\"Organization-org-mass-community-insurance.html\">Massachusetts Community Insurance. Generated Summary: active; name: Massachusetts Community Insurance</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes CMS-9115-F.V}\">Health Information Exchange and Care Coordination Across Payers</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2021-06-01 --&gt; 2022-06-01</p><h3>Actors</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>Reference</b></td></tr><tr><td>*</td><td><span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-RoleClass PROV}\">healthcare provider</span></td><td><a href=\"Organization-org-acme-insurance.html\">ACME Insurance. Generated Summary: active; name: ACME Insurance</a></td></tr></table><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span></p></blockquote></div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ];
+       fhir:Coding.display [ fhir:value "Patient Consent" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentcategorycodes" ];
+       fhir:Coding.code [ fhir:value "64292-6" ];
+       fhir:Coding.display [ fhir:value "Release of information consent" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/patient-john-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/patient-john-smith" ];
+     fhir:Reference.display [ fhir:value "SMITH, JOHN" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2021-06-01"^^xsd:date];
+  fhir:Consent.organization [
+     fhir:index 0;
+     fhir:link <http://mehi-ig.tranquildata.com/Organization/org-mass-community-insurance>;
+     fhir:Reference.reference [ fhir:value "Organization/org-mass-community-insurance" ];
+     fhir:Reference.display [ fhir:value "Massachusetts Community Insurance" ]
+  ];
+  fhir:Consent.policyRule [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes" ];
+       fhir:Coding.code [ fhir:value "CMS-9115-F.V" ];
+       fhir:Coding.display [ fhir:value "Health Information Exchange and Care Coordination Across Payers" ]
+     ]
+  ];
+  fhir:Consent.provision [
+     fhir:Consent.provision.type [ fhir:value "permit" ];
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2021-06-01"^^xsd:date ];
+       fhir:Period.end [ fhir:value "2022-06-01"^^xsd:date ]
+     ];
+     fhir:Consent.provision.actor [
+       fhir:index 0;
+       fhir:Consent.provision.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-RoleClass" ];
+           fhir:Coding.code [ fhir:value "PROV" ];
+           fhir:Coding.display [ fhir:value "healthcare provider" ]
+         ]
+       ];
+       fhir:Consent.provision.actor.reference [
+         fhir:link <http://mehi-ig.tranquildata.com/Organization/org-acme-insurance>;
+         fhir:Reference.reference [ fhir:value "Organization/org-acme-insurance" ];
+         fhir:Reference.display [ fhir:value "ACME Insurance" ]
+       ]
+     ];
+     fhir:Consent.provision.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ];
+         fhir:Coding.display [ fhir:value "Access" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Access" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/example1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,52 @@
+{% raw %}<pre class="json"><code class="language-json">
+{
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson">resourceType</a>" : "RelatedPerson",
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.id">id</a>" : "related-person-jennifer-smith-daughter",
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.meta">meta</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Meta#Meta.profile">profile</a>" : [
+      "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.status">status</a>" : "generated",
+    "<a href="http://hl7.org/fhir/R4/datatypes.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\&quot;http://www.w3.org/1999/xhtml\&quot;&gt;&lt;p&gt;&lt;b&gt;Generated Narrative&lt;/b&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;active&lt;/b&gt;: true&lt;/p&gt;&lt;p&gt;&lt;b&gt;patient&lt;/b&gt;: &lt;a href=\&quot;http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion\&quot;&gt;Jennifer Smith&lt;/a&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;relationship&lt;/b&gt;: &lt;span title=\&quot;Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype DAU}\&quot;&gt;daughter&lt;/span&gt;, &lt;span title=\&quot;Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Dependant}\&quot;&gt;Dependant&lt;/span&gt;&lt;/p&gt;&lt;p&gt;&lt;b&gt;name&lt;/b&gt;: JENNIFER SMITH&lt;/p&gt;&lt;p&gt;&lt;b&gt;gender&lt;/b&gt;: female&lt;/p&gt;&lt;p&gt;&lt;b&gt;birthDate&lt;/b&gt;: 1981-01-10&lt;/p&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.active">active</a>" : true,
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.patient">patient</a>" : {
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.reference">reference</a>" : "Patient/john-smith",
+    "<a href="http://hl7.org/fhir/R4/references.html#Reference#Reference.display">display</a>" : "Jennifer Smith"
+  },
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.relationship">relationship</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "DAU",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "daughter"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "daughter"
+    },
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.system">system</a>" : "http://hl7.org/fhir/CodeSystem/consent-exchange-relationships",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.code">code</a>" : "Dependant",
+          "<a href="http://hl7.org/fhir/R4/datatypes.html#Coding#Coding.display">display</a>" : "Dependant"
+        }
+      ],
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#CodeableConcept#CodeableConcept.text">text</a>" : "Dependant"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.name">name</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.family">family</a>" : "SMITH",
+      "<a href="http://hl7.org/fhir/R4/datatypes.html#HumanName#HumanName.given">given</a>" : [
+        "JENNIFER"
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.gender">gender</a>" : "female",
+  "<a href="http://hl7.org/fhir/R4/relatedperson.html#RelatedPerson.birthDate">birthDate</a>" : "1981-01-10"
+}</code></pre>
+{% endraw %}

@@ -1,0 +1,22 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ConsentExchangePolicies",
+  "id": "ConsentExchangePolicies",
+  "title": "ConsentExchangePolicies",
+  "description": "Consent Exchange - Policies",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies",
+  "compose": {
+    "include": [
+      {
+        "system": "http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes"
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/consent-policy"
+        ]
+      }
+    ]
+  }
+}

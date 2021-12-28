@@ -1,0 +1,41 @@
+# ╭──────────────────────────────────────ImplementationGuide───────────────────────────────────────╮
+# │  The properties below are used to create the ImplementationGuide resource. For a list of       │
+# │  supported properties, see: https://fshschool.org/docs/sushi/configuration/                    │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+
+id: mehi.ig.fhir
+canonical: http://mehi-ig.tranquildata.com
+name: MeHI Implementation Guide
+status: draft
+version: 0.5.4
+fhirVersion: 4.0.1
+copyrightYear: 2021+
+releaseLabel: ci-build
+publisher:
+  name: MITRE, Inc
+  url: https://github.com/mehi/implementation-guide
+dependencies:
+  hl7.fhir.us.core: 3.2.0
+
+# ╭────────────────────────────────────────────menu.xml────────────────────────────────────────────╮
+# │  To use a provided input/includes/menu.xml file, delete the "menu" property below.             │
+# ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
+menu:
+  Home: index.html
+  Payor to Payor: example1.html
+  Org Relationships: example2.html
+  # Consent Collection: datacollection.html
+  # Access Control Lists: consentengine.html
+  Artifacts: artifacts.html
+
+pages:
+  index.md:
+    title: Consent Exchange Implementation Guide
+  example1.md:
+    title: Payor To Payor
+  example2.md:
+    title: Organizational Relationships
+  # datacollection.md:
+  #   title: Data Collection
+  # consentengine.md:
+  #   title: Consent Engine

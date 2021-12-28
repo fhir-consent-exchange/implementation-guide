@@ -1,0 +1,45 @@
+{
+  "path": "http://hl7.org/fhir/R4/",
+  "canonical": "http://mehi-ig.tranquildata.com",
+  "igId": "mehi.ig.fhir",
+  "igName": "MeHIImplementationGuide",
+  "packageId": "mehi.ig.fhir",
+  "igVer": "0.5.4",
+  "errorCount": 89,
+  "version": "4.0.1",
+  "revision": "a53ec6ee1b",
+  "versionFull": "4.0.1-a53ec6ee1b",
+  "toolingVersion": "4.6.0",
+  "toolingRevision": "3",
+  "toolingVersionFull": "4.6.0 (3)",
+  "totalFiles": 44,
+  "processedFiles": 72,
+  "genDate": "Mon, Dec 27, 2021 11:26-0600",
+  "genDay": "27/12/2021",
+  "ig": {
+    "id": "mehi.ig.fhir",
+    "name": "MeHIImplementationGuide",
+    "url": "http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir",
+    "version": "0.5.4",
+    "status": "draft",
+    "experimental": false,
+    "publisher": "MITRE, Inc",
+    "gitstatus": "",
+    "contact": [
+      {
+        "name": "MITRE, Inc",
+        "telecom": [
+          "https://github.com/mehi/implementation-guide"
+        ]
+      }
+    ],
+    "date": "2021-12-27T11:26:17-06:00",
+    "fhirVersion": "4.0.1"
+  },
+  "hl7_fhir_us_core": "http://hl7.org/fhir/us/core",
+  "ver": {
+    "hl7_fhir_us_core": "http://hl7.org/fhir/us/core/2021Jan",
+    "us.nlm.vsac": "http://fhir.org/packages/us.nlm.vsac"
+  },
+  "us.nlm.vsac": "http://fhir.org/packages/us.nlm.vsac"
+}

@@ -1,0 +1,39 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ConsentExchangeRelations",
+  "id": "ConsentExchangeRelations",
+  "title": "ConsentExchangeRelations",
+  "description": "Consent Exchange - Relationships",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangeRelations",
+  "compose": {
+    "include": [
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/relatedperson-relationshiptype"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/practitioner-role"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/participant-role"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/security-role-type"
+        ]
+      },
+      {
+        "valueSet": [
+          "http://hl7.org/fhir/ValueSet/organization-type"
+        ]
+      }
+    ]
+  }
+}

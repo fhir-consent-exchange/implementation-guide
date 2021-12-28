@@ -1,0 +1,16 @@
+{
+  "resourceType": "Organization",
+  "id": "org-mass-community-insurance",
+  "meta": {
+    "versionId": "1",
+    "profile": [
+      "http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: Massachusetts Community Insurance</p></div>"
+  },
+  "active": true,
+  "name": "Massachusetts Community Insurance"
+}

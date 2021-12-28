@@ -1,0 +1,33 @@
+{
+  "resourceType": "Practitioner",
+  "id": "practitioner-alice-yin",
+  "active": true,
+  "name": [
+    {
+      "family": "YIN",
+      "given": [
+        "ALICE"
+      ]
+    }
+  ],
+  "telecom": [
+    {
+      "system": "phone",
+      "value": "555-555-8818",
+      "use": "home"
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1972-09-04",
+  "address": [
+    {
+      "line": [
+        "1235 Bay Ave."
+      ],
+      "city": "Boston",
+      "state": "MA",
+      "postalCode": "02101",
+      "country": "US"
+    }
+  ]
+}

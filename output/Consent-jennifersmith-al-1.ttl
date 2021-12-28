@@ -1,0 +1,135 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/jennifersmith-al-1> a fhir:Consent;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "jennifersmith-al-1"];
+  fhir:Resource.meta [
+     fhir:Meta.versionId [ fhir:value "1" ];
+     fhir:Meta.lastUpdated [ fhir:value "2017-04-17T00:00:00.0000+00:00"^^xsd:dateTime ];
+     fhir:Meta.source [ fhir:value "node-on-fhir.mitre.org#mehi-consent-engine" ];
+     fhir:Meta.profile [
+       fhir:value "http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1";
+       fhir:index 0;
+       fhir:link <http://hl7.org/fhir/us/sdoh-clinicalcare/StructureDefinition/SDOHCC-Consent-Base-1>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}\">Privacy Consent</span></p><p><b>category</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/v3-ActCode IDSCL}\">information disclosure</span></p><p><b>patient</b>: <a href=\"Patient-jennifer-smith.html\">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>dateTime</b>: 2017-04-17</p><p><b>organization</b>: <a href=\"Organization-org-together-health.html\">Together Health. Generated Summary: active; name: Together Health</a></p><p><b>policyRule</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentpolicycodes hipaa-auth}\">HIPAA Authorization</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2017-04-17 --&gt; (ongoing)</p><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></p><p><b>reference</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Pracitioner/practitioner-bernard-shuman/expansion\">SHUMAN, BERNARD</a></p></blockquote><blockquote><p><b>actor</b></p><p><b>role</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/contractsignertypecodes EVTWIT}\">Event Witness</span></p><p><b>reference</b>: <a href=\"RelatedPerson-related-person-jane-smith.html\">SMITH, JANE. Generated Summary: active; <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype MTH}\">mother</span>, <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Parent}\">Parent</span>; JANE SMITH ; Phone: 555-555-5554; gender: female; birthDate: 1981-01-10</a></p></blockquote><p><b>action</b>: <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction collect}\">Collect</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}\">Access</span>, <span title=\"Codes: {http://terminology.hl7.org/CodeSystem/consentaction correct}\">Access and Correct</span></p></blockquote></div>"
+  ];
+  fhir:Consent.status [ fhir:value "active"];
+  fhir:Consent.scope [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentscope" ];
+       fhir:Coding.code [ fhir:value "patient-privacy" ];
+       fhir:Coding.display [ fhir:value "Privacy Consent" ]
+     ]
+  ];
+  fhir:Consent.category [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActCode" ];
+       fhir:Coding.code [ fhir:value "IDSCL" ];
+       fhir:Coding.display [ fhir:value "information disclosure" ]
+     ]
+  ];
+  fhir:Consent.patient [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/jennifer-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/jennifer-smith" ];
+     fhir:Reference.display [ fhir:value "SMITH, JENNIFER" ]
+  ];
+  fhir:Consent.dateTime [ fhir:value "2017-04-17"^^xsd:date];
+  fhir:Consent.organization [
+     fhir:index 0;
+     fhir:link <http://mehi-ig.tranquildata.com/Organization/org-together-health>;
+     fhir:Reference.reference [ fhir:value "Organization/org-together-health" ];
+     fhir:Reference.display [ fhir:value "Together Health" ]
+  ];
+  fhir:Consent.policyRule [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentpolicycodes" ];
+       fhir:Coding.code [ fhir:value "hipaa-auth" ];
+       fhir:Coding.display [ fhir:value "HIPAA Authorization" ]
+     ]
+  ];
+  fhir:Consent.provision [
+     fhir:Consent.provision.type [ fhir:value "permit" ];
+     fhir:Consent.provision.period [
+       fhir:Period.start [ fhir:value "2017-04-17"^^xsd:date ]
+     ];
+     fhir:Consent.provision.actor [
+       fhir:index 0;
+       fhir:Consent.provision.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" ];
+           fhir:Coding.code [ fhir:value "EVTWIT" ];
+           fhir:Coding.display [ fhir:value "Event Witness" ]
+         ]
+       ];
+       fhir:Consent.provision.actor.reference [
+         fhir:link <http://mehi-ig.tranquildata.com/Pracitioner/practitioner-bernard-shuman>;
+         fhir:Reference.reference [ fhir:value "Pracitioner/practitioner-bernard-shuman" ];
+         fhir:Reference.display [ fhir:value "SHUMAN, BERNARD" ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:Consent.provision.actor.role [
+         fhir:CodeableConcept.coding [
+           fhir:index 0;
+           fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/contractsignertypecodes" ];
+           fhir:Coding.code [ fhir:value "EVTWIT" ];
+           fhir:Coding.display [ fhir:value "Event Witness" ]
+         ]
+       ];
+       fhir:Consent.provision.actor.reference [
+         fhir:link <http://mehi-ig.tranquildata.com/RelatedPerson/related-person-jane-smith>;
+         fhir:Reference.reference [ fhir:value "RelatedPerson/related-person-jane-smith" ];
+         fhir:Reference.display [ fhir:value "SMITH, JANE" ]
+       ]
+     ];
+     fhir:Consent.provision.action [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+         fhir:Coding.code [ fhir:value "collect" ];
+         fhir:Coding.display [ fhir:value "Collect" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Collect" ]
+     ], [
+       fhir:index 1;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+         fhir:Coding.code [ fhir:value "access" ];
+         fhir:Coding.display [ fhir:value "Access" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Access" ]
+     ], [
+       fhir:index 2;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/consentaction" ];
+         fhir:Coding.code [ fhir:value "correct" ];
+         fhir:Coding.display [ fhir:value "Access and Correct" ]
+       ];
+       fhir:CodeableConcept.text [ fhir:value "Access and Correct" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/Consent/jennifersmith-al-1.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

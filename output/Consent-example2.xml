@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Consent xmlns="http://hl7.org/fhir">
+  <id value="example2"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>scope</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentscope patient-privacy}">Patient Consent</span></p><p><b>category</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentcategorycodes 64292-6}">Release of information consent</span></p><p><b>patient</b>: <a href="Patient-patient-john-smith.html">SMITH, JOHN. Generated Summary: Medical Record Number: 2002501 (USUAL); active; JOHN SMITH ; Phone: 555-555-5553; gender: male; birthDate: 1980-04-14</a></p><p><b>dateTime</b>: 2021-12-15</p><p><b>policyRule</b>: <span title="Codes: {http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes CMS-9115-F.V}">Health Information Exchange and Care Coordination Across Payers</span></p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote><blockquote><p><b>provision</b></p><p><b>type</b>: permit</p><p><b>period</b>: 2005-02-20 --&gt; 2020-06-01</p><p><b>action</b>: <span title="Codes: {http://terminology.hl7.org/CodeSystem/consentaction access}">Access</span></p></blockquote></blockquote></div>
+  </text>
+  <status value="active"/>
+  <scope>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentscope"/>
+      <code value="patient-privacy"/>
+      <display value="Patient Consent"/>
+    </coding>
+  </scope>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/consentcategorycodes"/>
+      <code value="64292-6"/>
+      <display value="Release of information consent"/>
+    </coding>
+  </category>
+  <patient>
+    <reference value="Patient/patient-john-smith"/>
+    <display value="SMITH, JOHN"/>
+  </patient>
+  <dateTime value="2021-12-15"/>
+  <policyRule>
+    <coding>
+      <system value="http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes"/>
+      <code value="CMS-9115-F.V"/>
+      <display value="Health Information Exchange and Care Coordination Across Payers"/>
+    </coding>
+  </policyRule>
+  <provision>
+    <type value="permit"/>
+    <period>
+      <start value="2005-02-20"/>
+      <end value="2020-06-01"/>
+    </period>
+    <provision>
+      <type value="permit"/>
+      <period>
+        <start value="2005-02-20"/>
+        <end value="2020-06-01"/>
+      </period>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"/>
+            <code value="WIFE"/>
+            <display value="wife"/>
+          </coding>
+          <text value="wife"/>
+        </role>
+        <reference>
+          <reference value="RelatedPerson/related-person-jane-smith-wife"/>
+          <display value="Jane Smith"/>
+        </reference>
+      </actor>
+      <action>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+          <code value="access"/>
+          <display value="Access"/>
+        </coding>
+        <text value="Access"/>
+      </action>
+    </provision>
+    <provision>
+      <type value="permit"/>
+      <period>
+        <start value="2005-02-20"/>
+        <end value="2020-06-01"/>
+      </period>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"/>
+            <code value="DAU"/>
+            <display value="daughter"/>
+          </coding>
+          <text value="daughter"/>
+        </role>
+        <reference>
+          <reference value="RelatedPerson/related-person-jennifer-smith-daughter"/>
+          <display value="Jennifer Smith"/>
+        </reference>
+      </actor>
+      <action>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+          <code value="access"/>
+          <display value="Access"/>
+        </coding>
+        <text value="Access"/>
+      </action>
+    </provision>
+    <provision>
+      <type value="permit"/>
+      <period>
+        <start value="2005-02-20"/>
+        <end value="2020-06-01"/>
+      </period>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+          <text value="Healthcare Provider"/>
+        </role>
+        <reference>
+          <reference value="Organization/org-plentyrx"/>
+          <display value="Plenty RX"/>
+        </reference>
+      </actor>
+      <action>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+          <code value="access"/>
+          <display value="Access"/>
+        </coding>
+        <text value="Access"/>
+      </action>
+    </provision>
+    <provision>
+      <type value="permit"/>
+      <period>
+        <start value="2005-02-20"/>
+        <end value="2020-06-01"/>
+      </period>
+      <actor>
+        <role>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/organization-type"/>
+            <code value="prov"/>
+            <display value="Healthcare Provider"/>
+          </coding>
+          <coding>
+            <system value="http://dicom.nema.org/resources/ontology/DCM"/>
+            <code value="110150"/>
+            <display value="Application"/>
+          </coding>
+          <text value="Healthcare Provider"/>
+        </role>
+        <reference>
+          <reference value="Organization/org-together-health"/>
+          <display value="Together Health"/>
+        </reference>
+      </actor>
+      <action>
+        <coding>
+          <system value="http://terminology.hl7.org/CodeSystem/consentaction"/>
+          <code value="access"/>
+          <display value="Access"/>
+        </coding>
+        <text value="Access"/>
+      </action>
+    </provision>
+  </provision>
+</Consent>

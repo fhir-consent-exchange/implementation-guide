@@ -1,0 +1,412 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "mehi.ig.fhir",
+  "url": "http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir",
+  "version": "0.5.4",
+  "name": "MeHIImplementationGuide",
+  "status": "draft",
+  "publisher": "MITRE, Inc",
+  "contact": [
+    {
+      "name": "MITRE, Inc",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://github.com/mehi/implementation-guide"
+        }
+      ]
+    }
+  ],
+  "packageId": "mehi.ig.fhir",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "dependsOn": [
+    {
+      "packageId": "hl7.fhir.us.core",
+      "version": "3.2.0",
+      "uri": "http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core",
+      "id": "hl7_fhir_us_core"
+    }
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-careteam"
+        },
+        "name": "ConsentExchangeCareTeam",
+        "description": "CareTeam resource for describing workflow actors and their relationships.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-consent"
+        },
+        "name": "ConsentExchangeConsent",
+        "description": "Consent resource for describing actors in an payor-to-payor data exchange workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-organization"
+        },
+        "name": "ConsentExchangeOrganization",
+        "description": "Organization resource for describing actors in an payor-to-payor data exchange workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-patient"
+        },
+        "name": "ConsentExchangePatient",
+        "description": "Patient resource for describing actors in an payor-to-payor data exchange workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-practitioner"
+        },
+        "name": "ConsentExchangePractitioner",
+        "description": "Practitioner resource for describing actors in an payor-to-payor data exchange workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/consent-exchange-related-person"
+        },
+        "name": "ConsentExchangeRelatedPerson",
+        "description": "RelatedPerson resource for describing actors in an payor-to-payor data exchange workflow.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/consent-exchange-category-codes"
+        },
+        "name": "ConsentExchangeCategoryCodes",
+        "description": "Consent Exchange - Category Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ConsentExchangePolicies"
+        },
+        "name": "ConsentExchangePolicies",
+        "description": "Consent Exchange - Policies",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/ConsentExchangeRelations"
+        },
+        "name": "ConsentExchangeRelations",
+        "description": "Consent Exchange - Relationships",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/consent-exchange-scope-codes"
+        },
+        "name": "ConsentExchangeScopeCodes",
+        "description": "Consent Exchange - Scope Codes",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/CmsInteroperabilityPolicyCodes"
+        },
+        "name": "CmsInteroperabilityPolicyCodes",
+        "description": "Policy provisions defined under CMS-9115-F, CMS Interoperability and Patient Access final rule",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/ConsentExchangeRelationships"
+        },
+        "name": "ConsentExchangeRelationships",
+        "description": "Relationships used to model and exchange consent relationships",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/PayorToPayorExchangePolicyCodes"
+        },
+        "name": "PayorToPayorExchangePolicyCodes",
+        "description": "Policy codes used to define legal frameworks under which consent exchange occurs between payors.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Jennifer-Consents-MA"
+        },
+        "name": "Jennifer-Consents-MA",
+        "description": "Example of all Jennifer Smith consent records from Massachuesettes delivered delivered in a bundle of files.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/Jennifer-MA-Rollup"
+        },
+        "name": "jennifer-ma-rollup",
+        "description": "Example rollup of all Jennifer Smith consent records from Massachuesettes delivered in a single file.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Medication/estrodiol-contraceptive"
+        },
+        "name": "estrodiol-contraceptive",
+        "description": "Contraceptive birth control medication.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/example1"
+        },
+        "name": "example1",
+        "description": "Example 1",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/example2"
+        },
+        "name": "example2",
+        "description": "Example 2",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/jane-doe"
+        },
+        "name": "jane-doe",
+        "description": "Jane Doe patient not part of relationship model, used for checking security access.",
+        "exampleCanonical": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"
+      },
+      {
+        "reference": {
+          "reference": "Patient/jennifer-smith"
+        },
+        "name": "jennifer-smith",
+        "description": "Jennifer Smith - Patient demographics record.",
+        "exampleCanonical": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"
+      },
+      {
+        "reference": {
+          "reference": "Consent/jennifersmith-al-1"
+        },
+        "name": "jennifersmith-al-1",
+        "description": "Consent record from Alabama",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/jennifersmith-ma-1"
+        },
+        "name": "jennifersmith-ma-1",
+        "description": "Consent record from Massachuesetts for treatment.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/jennifersmith-ma-2"
+        },
+        "name": "jennifersmith-ma-2",
+        "description": "Consent record from Massachuesetts for parental access.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/johnsmith-consent-mass-community-insurance"
+        },
+        "name": "johnsmith-consent-mass-community-insurance",
+        "description": "Consent for AMCE Insurance to share data with Mass.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/johnsmith-consent-org-acme-insurance"
+        },
+        "name": "johnsmith-consent-org-acme-insurance",
+        "description": "Consent for AMCE Insurance to access hospital data.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/johnsmith-consent-org-pillbox"
+        },
+        "name": "johnsmith-consent-org-pillbox",
+        "description": "Consent to access data for Pillbox app",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/johnsmith-consent-plentyrx"
+        },
+        "name": "johnsmith-consent-plentyrx",
+        "description": "Consent to access data for Pillbox app",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Consent/johnsmith-consent-plentyrx-revoke"
+        },
+        "name": "johnsmith-consent-plentyrx-revoke",
+        "description": "Consent to access data for PlentyRx app after it was revoked.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medreq-1234557"
+        },
+        "name": "medreq-1234557",
+        "description": "Medication prescription writtin in Alabama by Dr. Shuman",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "MedicationRequest/medreq-22348957"
+        },
+        "name": "medreq-22348957",
+        "description": "Medication prescription writtin in Massachuesetts by Dr. Yin",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/org-acme-insurance"
+        },
+        "name": "org-acme-insurance",
+        "description": "ACME Insurance Company (Payor 1)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/org-mass-community-insurance"
+        },
+        "name": "org-mass-community-insurance",
+        "description": "Massachusetts Community Insurance (Payor 2)",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/org-pillbox"
+        },
+        "name": "org-pillbox",
+        "description": "Online pharmacy organization that offers a mobile app.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/org-plentyrx"
+        },
+        "name": "org-plentyrx",
+        "description": "Online pharmacy organization that offers a mobile app.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Organization/org-together-health"
+        },
+        "name": "org-together-health",
+        "description": "Clinical management software with patient portal.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Patient/patient-john-smith"
+        },
+        "name": "patient-john-smith",
+        "description": "John Smith - Patient demographics record.",
+        "exampleCanonical": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-alice-yin"
+        },
+        "name": "practitioner-alice-yin",
+        "description": "Dr. Alice Yin - Clinical practitioner located in Massacheusetts.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "Practitioner/practitioner-bernard-shuman"
+        },
+        "name": "practitioner-bernard-shuman",
+        "description": "Dr. Bernard Shuman - Clinical practitioner located in Alabama.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/related-person-jane-smith"
+        },
+        "name": "related-person-jane-smith",
+        "description": "Jane Smith - Parental relationship record.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/related-person-jane-smith-wife"
+        },
+        "name": "related-person-jane-smith-wife",
+        "description": "Jane Smith - Spouse relationship record.",
+        "exampleCanonical": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/related-person-jennifer-smith-daughter"
+        },
+        "name": "related-person-jennifer-smith-daughter",
+        "description": "Jennifer Smith - Daughter relationship record.",
+        "exampleCanonical": "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/related-person-john-smith"
+        },
+        "name": "related-person-john-smith",
+        "description": "John Smith - Parental relationship record.",
+        "exampleBoolean": true
+      },
+      {
+        "reference": {
+          "reference": "RelatedPerson/stranger-001"
+        },
+        "name": "stranger-001",
+        "description": "A random stranger to test security access against.",
+        "exampleBoolean": true
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Consent Exchange Implementation Guide",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "example1.html",
+          "title": "Payor To Payor",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "example2.html",
+          "title": "Organizational Relationships",
+          "generation": "markdown"
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2021+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      }
+    ]
+  }
+}

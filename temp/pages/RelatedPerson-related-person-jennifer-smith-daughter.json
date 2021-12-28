@@ -1,0 +1,50 @@
+{
+  "resourceType": "RelatedPerson",
+  "id": "related-person-jennifer-smith-daughter",
+  "meta": {
+    "profile": [
+      "http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>patient</b>: <a href=\"http://fhir.org/packages/us.nlm.vsac/Patient/john-smith/expansion\">Jennifer Smith</a></p><p><b>relationship</b>: <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype DAU}\">daughter</span>, <span title=\"Codes: {http://hl7.org/fhir/CodeSystem/consent-exchange-relationships Dependant}\">Dependant</span></p><p><b>name</b>: JENNIFER SMITH</p><p><b>gender</b>: female</p><p><b>birthDate</b>: 1981-01-10</p></div>"
+  },
+  "active": true,
+  "patient": {
+    "reference": "Patient/john-smith",
+    "display": "Jennifer Smith"
+  },
+  "relationship": [
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype",
+          "code": "DAU",
+          "display": "daughter"
+        }
+      ],
+      "text": "daughter"
+    },
+    {
+      "coding": [
+        {
+          "system": "http://hl7.org/fhir/CodeSystem/consent-exchange-relationships",
+          "code": "Dependant",
+          "display": "Dependant"
+        }
+      ],
+      "text": "Dependant"
+    }
+  ],
+  "name": [
+    {
+      "family": "SMITH",
+      "given": [
+        "JENNIFER"
+      ]
+    }
+  ],
+  "gender": "female",
+  "birthDate": "1981-01-10"
+}

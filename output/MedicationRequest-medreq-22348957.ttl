@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/MedicationRequest/medreq-22348957> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "medreq-22348957"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>medication</b>: <a href=\"Medication-estrodiol-contraceptive.html\">Estradiol. Generated Summary: status: active; <span title=\"Codes: {http://snomed.info/sct 385055001}\">Tablet dose form (qualifier value)</span></a></p><p><b>subject</b>: <a href=\"Patient-jennifer-smith.html\">SMITH, JENNIFER. Generated Summary: Medical Record Number: 1042501 (USUAL); active; JENNIFER SMITH ; Phone: 555-555-5555; gender: female; birthDate: 2005-02-20</a></p><p><b>authoredOn</b>: 2020-09-02</p><p><b>requester</b>: <a href=\"Practitioner-practitioner-alice-yin.html\">YIN, ALICE. Generated Summary: active; ALICE YIN ; Phone: 555-555-8818; gender: female; birthDate: 1972-09-04</a></p></div>"
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "plan"];
+  fhir:MedicationRequest.medicationReference [
+     fhir:link <http://mehi-ig.tranquildata.com/Medication/estrodiol-contraceptive>;
+     fhir:Reference.reference [ fhir:value "Medication/estrodiol-contraceptive" ];
+     fhir:Reference.display [ fhir:value "Estradiol" ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:link <http://mehi-ig.tranquildata.com/Patient/jennifer-smith>;
+     fhir:Reference.reference [ fhir:value "Patient/jennifer-smith" ];
+     fhir:Reference.display [ fhir:value "SMITH, JENNIFER" ]
+  ];
+  fhir:MedicationRequest.authoredOn [ fhir:value "2020-09-02"^^xsd:date];
+  fhir:MedicationRequest.requester [
+     fhir:link <http://mehi-ig.tranquildata.com/Practitioner/practitioner-alice-yin>;
+     fhir:Reference.reference [ fhir:value "Practitioner/practitioner-alice-yin" ];
+     fhir:Reference.display [ fhir:value "YIN, ALICE" ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/MedicationRequest/medreq-22348957.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,40 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships> a fhir:CodeSystem;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ConsentExchangeRelationships"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td></tr></table></div>"
+  ];
+  fhir:CodeSystem.url [ fhir:value "http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships"];
+  fhir:CodeSystem.version [ fhir:value "0.5.4"];
+  fhir:CodeSystem.name [ fhir:value "ConsentExchangeRelationships"];
+  fhir:CodeSystem.title [ fhir:value "ConsentExchangeRelationships"];
+  fhir:CodeSystem.status [ fhir:value "active"];
+  fhir:CodeSystem.date [ fhir:value "2021-12-27T11:26:17-06:00"^^xsd:dateTime];
+  fhir:CodeSystem.publisher [ fhir:value "MITRE, Inc"];
+  fhir:CodeSystem.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MITRE, Inc" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/mehi/implementation-guide" ]
+     ]
+  ];
+  fhir:CodeSystem.description [ fhir:value "Relationships used to model and exchange consent relationships"];
+  fhir:CodeSystem.content [ fhir:value "complete"] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/CodeSystem/ConsentExchangeRelationships.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

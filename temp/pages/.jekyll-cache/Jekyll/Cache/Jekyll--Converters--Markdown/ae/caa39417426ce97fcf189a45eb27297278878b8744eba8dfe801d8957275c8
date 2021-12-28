@@ -1,0 +1,409 @@
+I"�<p><!-- white space is critical inside of capture --></p>
+<div>
+<!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown.-->
+</div>
+
+<h3 id="tutorial-and-walkthrough">Tutorial and Walkthrough</h3>
+
+<p>This tutorial extends on the previous tutoral, to consider organizational relationships.</p>
+
+<h4 id="step-1---define-the-use-case">Step 1 - Define the Use Case</h4>
+
+<p>We continue with the following use case:</p>
+
+<blockquote>
+  <p>When personal data is shared it should contain meta-data to ensure a consistent engagement experience. I will have attributes like DoB or State of Residence, and some number of relationships. For this example, I have at least 2 family relationships (which should name the other party but divulge no other details about them), and at least two general (not Provider or Payer) relationships. These might be to a pharmacy, to an online service, to an app on my phone, a friend, etc. The familial relationships are “just” stated relationships (and as we’ve discussed, common healthcare relationships map in the same way). The general relationships are non-HIPAA consents to share some scoped set of data, over some time-frame (which may still be active).</p>
+</blockquote>
+
+<h4 id="step-2---grammar-analysis">Step 2 - Grammar Analysis</h4>
+
+<p>Again, we do a grammar analysis to identify the actors, organizations, and relationships defined in the example.  For example:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">username</code> will have attributes like <code class="language-plaintext highlighter-rouge">birthDate</code> or <code class="language-plaintext highlighter-rouge">address.state</code>, and some number of relationships. For this example, <code class="language-plaintext highlighter-rouge">username</code> have at least 2 family <code class="language-plaintext highlighter-rouge">related persons</code> relationships, and at least two general <code class="language-plaintext highlighter-rouge">organizational</code> relationships. These might be to <code class="language-plaintext highlighter-rouge">pharmacy1</code>, to an <code class="language-plaintext highlighter-rouge">app1</code> on my phone, etc. The general relationships share some scoped set of data according to the <code class="language-plaintext highlighter-rouge">CMS Interoperability and Patient Access final rule</code>, over some <code class="language-plaintext highlighter-rouge">period of time</code>.</p>
+</blockquote>
+
+<p>We then use the <a href="https://www.hl7.org/fhir/resourcelist.html">FHIR Resourcelist</a> to identify the relevant FHIR resources and their schemas.  When identified, we create a FHIR-ized version of the use case, like so:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">Patient2</code> will have attributes like <code class="language-plaintext highlighter-rouge">birthDate</code> and <code class="language-plaintext highlighter-rouge">address.state</code>, and some number of <code class="language-plaintext highlighter-rouge">RelatedPerson</code> records. For this example, <code class="language-plaintext highlighter-rouge">Patient1</code> will be referenced as a familial relationship by <code class="language-plaintext highlighter-rouge">RelatedPerson1</code> and <code class="language-plaintext highlighter-rouge">RelatedPerson2</code>, and at least two general organizational relationships by <code class="language-plaintext highlighter-rouge">Organization1</code> (pharmacy) and <code class="language-plaintext highlighter-rouge">Organization2</code> (app). The general relationships share some scoped set of data according to the <code class="language-plaintext highlighter-rouge">CMS Interoperability and Patient Access final rule</code>, over some <code class="language-plaintext highlighter-rouge">period of time</code>.</p>
+</blockquote>
+
+<h4 id="step-31---convert-to-named-instances">Step 3.1 - Convert to Named Instances</h4>
+
+<p>Using the resource schemas, we now want to create instances for each of the actors and entities in the use case, like so:</p>
+
+<blockquote>
+  <p><code class="language-plaintext highlighter-rouge">John Smith</code> was born on April 14th, 1980 in Alabama.  He moved back to his home state in 2005, where he resided until June 2020, when he and his family moved to Massachusettes.  He has a <code class="language-plaintext highlighter-rouge">wife Jane Smith</code>, and a <code class="language-plaintext highlighter-rouge">daughter Jennifer Smith</code>.  He has been using an online pharmacy that provides an app titled <code class="language-plaintext highlighter-rouge">PlentyRX</code>, and uses a patient portal provided by <code class="language-plaintext highlighter-rouge">Together Health</code>.  The general relationships share some scoped set of data according to the <code class="language-plaintext highlighter-rouge">CMS Interoperability and Patient Access final rule</code>, for the period between 2005 and 2020 when he was living in Alabama.</p>
+</blockquote>
+
+<h4 id="step-32---define-actor-and-organization-instances">Step 3.2 - Define Actor and Organization Instances</h4>
+
+<p>As you do this, you will want to begin creating structured JSON documents for each of the resources.  In many instances, you will already have these resources available, from either the examples in the Artifacts page of this implementation guide, or from a live FHIR server, or perhaps provided from a database.</p>
+
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// John Smith</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">patient-john-smith</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">resourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Patient</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="dl">"</span><span class="s2">family</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SMITH</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">given</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JOHN</span><span class="dl">"</span>
+  <span class="p">}],</span>
+  <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">male</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">birthDate</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">1980-04-14</span><span class="dl">"</span>
+<span class="p">}</span>
+
+<span class="c1">// Releated Person - Jane Smith</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">related-person-jane-smith-wife</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">resourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RelatedPerson</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="dl">"</span><span class="s2">family</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SMITH</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">given</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JANE</span><span class="dl">"</span>
+  <span class="p">}],</span>
+  <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">female</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">birthDate</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">1981-01-10</span><span class="dl">"</span>
+<span class="p">}</span>
+
+<span class="c1">// Releated Person - Jennifer Smith</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">related-person-jennifer-smith-daughter</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">resourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">RelatedPerson</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span><span class="p">:</span> <span class="p">[{</span>
+      <span class="dl">"</span><span class="s2">family</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">SMITH</span><span class="dl">"</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">given</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JENNIFER</span><span class="dl">"</span>
+  <span class="p">}],</span>
+  <span class="dl">"</span><span class="s2">gender</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">female</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">birthDate</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">2006-01-10</span><span class="dl">"</span>
+<span class="p">}</span>
+
+<span class="c1">// Plenty RX - Online Pharmacy</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">org-plentyrx</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">resourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Organization</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Plenty Rx</span><span class="dl">"</span>
+<span class="p">}</span>
+
+<span class="c1">// Together Health - Patient Portal</span>
+<span class="p">{</span>
+  <span class="dl">"</span><span class="s2">id</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">org-together-health</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">resourceType</span><span class="dl">"</span><span class="p">:</span> <span class="dl">"</span><span class="s2">Organization</span><span class="dl">"</span><span class="p">,</span>
+  <span class="dl">"</span><span class="s2">name</span><span class="dl">"</span> <span class="p">:</span> <span class="dl">"</span><span class="s2">Together Health</span><span class="dl">"</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<h4 id="step-33---create-records-in-database-via-http">Step 3.3 - Create Records in Database via HTTP</h4>
+
+<p>Once the consent is constructed, it can be served up by an endpoint URL.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># create the necessary supporting records</span>
+PUT http://localhost:3000/baseR4/Patient/patient-john-smith  
+PUT http://localhost:3000/baseR4/RelatedPerson/related-person-jane-smith-wife   
+PUT http://localhost:3000/baseR4/RelatedPerson/related-person-jennifer-smith-daughter    
+PUT http://localhost:3000/baseR4/Organization/org-plentyrx  
+PUT http://localhost:3000/baseR4/Organization/org-together-health  
+
+<span class="c"># fetch the supporting records</span>
+GET http://localhost:3000/baseR4/Patient/patient-john-smith  
+GET http://localhost:3000/baseR4/RelatedPerson/related-person-jane-smith-wife   
+GET http://localhost:3000/baseR4/RelatedPerson/related-person-jennifer-smith-daughter    
+GET http://localhost:3000/baseR4/Organization/org-plentyrx  
+GET http://localhost:3000/baseR4/Organization/org-together-health  
+</code></pre></div></div>
+
+<h4 id="step-4---define-relationships">Step 4 - Define Relationships</h4>
+
+<p>We continue by using the <a href="./ConsentExchangeRelations.html">ConsentExchangeRelations</a> value set to define the relationship types.</p>
+
+<p><em>Jane Smith - Wife</em></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"related-person-jane-smith-wife"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RelatedPerson"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SMITH"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JANE"</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"female"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"birthDate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"1981-01-10"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"patient"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/john-smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"relationship"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"WIFE"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"wife"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"wife"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/consent-exchange-relationships"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Spouse"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Spouse"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">],</span><span class="w">
+    </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Spouse"</span><span class="w">
+  </span><span class="p">}]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<p><em>Jane Smith - Daughter</em></p>
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"related-person-jennifer-smith-daughter"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="p">:</span><span class="w"> </span><span class="s2">"RelatedPerson"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"family"</span><span class="p">:</span><span class="w"> </span><span class="s2">"SMITH"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"given"</span><span class="p">:</span><span class="w"> </span><span class="s2">"JENNIFER"</span><span class="w">
+  </span><span class="p">}],</span><span class="w">
+  </span><span class="nl">"gender"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"female"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"birthDate"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2006-01-10"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"patient"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/john-smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"John Smith"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"relationship"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"DAU"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"daughter"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"daughter"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/consent-exchange-relationships"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dependant"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dependant"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Dependant"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="step-5---create-consent-resource">Step 5 - Create Consent Resource</h4>
+
+<p>Once created, these actors and organizations can be used to build consent resources.</p>
+
+<div class="language-json highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"resourceType"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Consent"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"id"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"12345"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"active"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"patient"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Patient/patient-john-smith"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"SMITH, JOHN"</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"dateTime"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2021-12-15"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"policyRule"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"CMS-9115-F.V"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Health Information Exchange and Care Coordination Across Payers"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+  </span><span class="p">},</span><span class="w">
+  </span><span class="nl">"provision"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"period"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"start"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-02-20"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="nl">"provision"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"period"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"start"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-02-20"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"actor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"role"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"WIFE"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"wife"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"wife"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"RelatedPerson/related-person-jane-smith-wife"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jane Smith"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentaction"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"access"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"period"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"start"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-02-20"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"actor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"role"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/CodeSystem/relatedperson-relationshiptype"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"DAU"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"daughter"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"daughter"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"RelatedPerson/related-person-jennifer-smith-daughter"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Jennifer Smith"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentaction"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"access"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"period"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"start"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-02-20"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"actor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"role"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/organization-type"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"prov"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Healthcare Provider"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Healthcare Provider"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization/org-plentyrx"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Plenty RX"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentaction"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"access"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">]</span><span class="w">
+    </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"type"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"permit"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"period"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"start"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"2005-02-20"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2020-06-01"</span><span class="w">
+      </span><span class="p">},</span><span class="w">
+      </span><span class="nl">"actor"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"role"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+              </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/organization-type"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"prov"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Healthcare Provider"</span><span class="w">
+              </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://dicom.nema.org/resources/ontology/DCM"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"110150"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Application"</span><span class="w">
+              </span><span class="p">}</span><span class="w">
+            </span><span class="p">],</span><span class="w">
+            </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Healthcare Provider"</span><span class="w">
+          </span><span class="p">},</span><span class="w">
+          </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+            </span><span class="nl">"reference"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Organization/org-together-health"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Together Health"</span><span class="w">
+          </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"action"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"coding"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="p">{</span><span class="w">
+              </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://terminology.hl7.org/CodeSystem/consentaction"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"access"</span><span class="p">,</span><span class="w">
+              </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+          </span><span class="p">],</span><span class="w">
+          </span><span class="nl">"text"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"Access"</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+      </span><span class="p">],</span><span class="w">
+      </span><span class="nl">"class"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationRequest"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationRequest"</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationAdministration"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationAdministration"</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationDispense"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationDispense"</span><span class="w">
+        </span><span class="p">},</span><span class="w"> </span><span class="p">{</span><span class="w">
+          </span><span class="nl">"system"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"http://hl7.org/fhir/resource-types"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"code"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationStatement"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"display"</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="s2">"MedicationStatement"</span><span class="w">
+      </span><span class="p">}]</span><span class="w">
+    </span><span class="p">}]</span><span class="w">
+  </span><span class="p">}</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div></div>
+
+<h4 id="step-6---post-over-http">Step 6 - Post Over HTTP</h4>
+
+<p>Alternatively, you may wish to post the consent record elsewhere.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c"># if the Organizations already exist on the FHIR server</span>
+<span class="c"># and you fill out the Consent resource correctly</span>
+<span class="c"># you can use POST to ask the server to assign a Consent.id value</span>
+POST http://localhost:3000/baseR4/Consent
+
+<span class="c"># if you would like to specify the Organization ids explicitly</span>
+<span class="c"># you will need to use the PUT operation to register the resource with the desired id</span>
+<span class="c"># then fill out the Consent resource accordingly and PUT it to the server</span>
+PUT http://localhost:3000/baseR4/Organization/1
+PUT http://localhost:3000/baseR4/Organization/2
+PUT http://localhost:3000/baseR4/Consent/12345
+</code></pre></div></div>
+
+:ET

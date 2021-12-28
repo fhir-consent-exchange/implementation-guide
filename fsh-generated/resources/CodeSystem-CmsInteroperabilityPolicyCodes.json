@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CmsInteroperabilityPolicyCodes",
+  "id": "CmsInteroperabilityPolicyCodes",
+  "title": "CmsInteroperabilityPolicyCodes",
+  "description": "Policy provisions defined under CMS-9115-F, CMS Interoperability and Patient Access final rule",
+  "version": "0.5.4",
+  "url": "http://mehi-ig.tranquildata.com/CodeSystem/CmsInteroperabilityPolicyCodes",
+  "concept": [
+    {
+      "code": "CMS-9115-F.III",
+      "display": "Provisions of Patient Access Through APIs"
+    },
+    {
+      "code": "CMS-9115-F.IV",
+      "display": "API Access to Published Provider Directory Data Provisions"
+    },
+    {
+      "code": "CMS-9115-F.V",
+      "display": "Health Information Exchange and Care Coordination Across Payers"
+    },
+    {
+      "code": "CMS-9115-F.VI",
+      "display": "Care Coordination Through Trusted Exchange Networks"
+    },
+    {
+      "code": "CMS-9115-F.VII",
+      "display": "Improving the Medicare-Medicaid Dually Eligible Experience"
+    },
+    {
+      "code": "CMS-9115-F.VIII",
+      "display": "Information Blocking Background and Public Reporting"
+    },
+    {
+      "code": "CMS-9115-F.IX",
+      "display": "Provider Digital Contact Information"
+    },
+    {
+      "code": "CMS-9115-F.X",
+      "display": "Conditions of Participation for Hospitals and Critical Access Hospitals"
+    }
+  ],
+  "count": 8
+}

@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies> a fhir:ValueSet;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "ConsentExchangePolicies"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <a href=\"CodeSystem-PayorToPayorExchangePolicyCodes.html\"><code>http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes</code></a></li><li>Import all the codes that are contained in <a href=\"http://hl7.org/fhir/R4/valueset-consent-policy.html\">http://hl7.org/fhir/ValueSet/consent-policy</a></li></ul></div>"
+  ];
+  fhir:ValueSet.url [ fhir:value "http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies"];
+  fhir:ValueSet.version [ fhir:value "0.5.4"];
+  fhir:ValueSet.name [ fhir:value "ConsentExchangePolicies"];
+  fhir:ValueSet.title [ fhir:value "ConsentExchangePolicies"];
+  fhir:ValueSet.status [ fhir:value "active"];
+  fhir:ValueSet.date [ fhir:value "2021-12-27T11:26:17-06:00"^^xsd:dateTime];
+  fhir:ValueSet.publisher [ fhir:value "MITRE, Inc"];
+  fhir:ValueSet.contact [
+     fhir:index 0;
+     fhir:ContactDetail.name [ fhir:value "MITRE, Inc" ];
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "https://github.com/mehi/implementation-guide" ]
+     ]
+  ];
+  fhir:ValueSet.description [ fhir:value "Consent Exchange - Policies"];
+  fhir:ValueSet.compose [
+     fhir:ValueSet.compose.include [
+       fhir:index 0;
+       fhir:ValueSet.compose.include.system [ fhir:value "http://mehi-ig.tranquildata.com/CodeSystem/PayorToPayorExchangePolicyCodes" ]
+     ], [
+       fhir:index 1;
+       fhir:ValueSet.compose.include.valueSet [
+         fhir:value "http://hl7.org/fhir/ValueSet/consent-policy";
+         fhir:index 0;
+         fhir:link <http://hl7.org/fhir/ValueSet/consent-policy>
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://mehi-ig.tranquildata.com/ValueSet/ConsentExchangePolicies.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

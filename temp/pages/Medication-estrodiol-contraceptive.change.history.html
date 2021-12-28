@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Medication' id='estrodiol-contraceptive' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Medication/estrodiol-contraceptive - Change History</h2>
+  <p>History of changes for estrodiol-contraceptive {{type | downcase}}.</p>
+
+  {%include Medication-estrodiol-contraceptive-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

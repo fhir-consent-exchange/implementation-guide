@@ -1,0 +1,21 @@
+---
+---
+<!-- layouts\layout-changehistory.html -->
+<!-- get modelType -->
+
+
+{% include fragment-pagebegin.html %}
+
+<div style="counter-reset: section 10" class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">Publish Box goes here</p><!--EndReleaseHeader-->
+  {% include fragment-base-navtabs.html type='Organization' id='org-mass-community-insurance' active='history' %}
+
+  <a name="root"> </a>
+  <h2 id="root">{{type}}: Massachusetts Community Insurance - Change History</h2>
+  <p>History of changes for org-mass-community-insurance {{type | downcase}}.</p>
+
+  {%include Organization-org-mass-community-insurance-history.xhtml%}
+
+</div>
+{% assign includetabscripts = 'true' %}
+{% include fragment-pageend.html %}

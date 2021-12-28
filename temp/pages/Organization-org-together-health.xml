@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="org-together-health"/>
+  <meta>
+    <versionId value="1"/>
+    <lastUpdated value="2021-09-13T00:00:00.0000+00:00"/>
+    <profile value="http://hl7.org/fhir/us/core/StructureDefinition/us-core-organization"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>active</b>: true</p><p><b>name</b>: Together Health</p><p><b>address</b>: 132th St, Underland Park, KS 66223</p></div>
+  </text>
+  <active value="true"/>
+  <name value="Together Health"/>
+  <address>
+    <text value="132th St, Underland Park, KS 66223"/>
+    <line value="132th Street,"/>
+    <city value="Underland Park"/>
+    <state value="KS"/>
+    <postalCode value="66223"/>
+  </address>
+</Organization>

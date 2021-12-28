@@ -1,0 +1,1090 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+   <id value="mehi.ig.fhir"/>
+   <text>
+      <status value="extensions"/>
+      <div xmlns="http://www.w3.org/1999/xhtml">
+         <h2>MeHIImplementationGuide</h2>
+         <p>The official URL for this implementation guide is: </p>
+         <pre>http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir</pre>
+      </div>
+   </text>
+   <url value="http://mehi-ig.tranquildata.com/ImplementationGuide/mehi.ig.fhir"/>
+   <version value="0.5.4"/>
+   <name value="MeHIImplementationGuide"/>
+   <status value="draft"/>
+   <date value="2021-12-27T11:26:17-06:00"/>
+   <publisher value="MITRE, Inc"/>
+   <contact>
+      <name value="MITRE, Inc"/>
+      <telecom>
+         <system value="url"/>
+         <value value="https://github.com/mehi/implementation-guide"/>
+      </telecom>
+   </contact>
+   <packageId value="mehi.ig.fhir"/>
+   <license value="CC0-1.0"/>
+   <fhirVersion value="4.0.1"/>
+   <dependsOn id="hl7_fhir_us_core">
+      <uri value="http://hl7.org/fhir/us/core/ImplementationGuide/hl7.fhir.us.core"/>
+      <packageId value="hl7.fhir.us.core"/>
+      <version value="3.2.0"/>
+   </dependsOn>
+   <definition>
+
+
+
+
+
+
+
+      <grouping id="-str-profile">
+         <name value="Structures: Resource Profiles"/>
+         <description value="These define constraints on FHIR resources for systems conforming to this implementation guide"/>
+      </grouping>
+
+
+      <grouping id="-term-valueset">
+         <name value="Terminology: Value Sets"/>
+         <description value="These define sets of codes used by systems conforming to this implementation guide"/>
+      </grouping>
+      <grouping id="-term-codesystem">
+         <name value="Terminology: Code Systems"/>
+         <description value="These define new code systems used by systems conforming to this implementation guide"/>
+      </grouping>
+
+
+
+
+
+
+
+
+      <grouping id="-ex-example">
+         <name value="Example: Example Instances"/>
+         <description value="These are example instances that show what data produced and consumed by systems conforming with this implementation guide might look like"/>
+      </grouping>
+
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-careteam.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-careteam"/>
+         </reference>
+         <name value="ConsentExchangeCareTeam"/>
+         <description value="CareTeam resource for describing workflow actors and their relationships."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-consent.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-consent"/>
+         </reference>
+         <name value="ConsentExchangeConsent"/>
+         <description value="Consent resource for describing actors in an payor-to-payor data exchange workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-organization.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-organization"/>
+         </reference>
+         <name value="ConsentExchangeOrganization"/>
+         <description value="Organization resource for describing actors in an payor-to-payor data exchange workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-patient.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-patient"/>
+         </reference>
+         <name value="ConsentExchangePatient"/>
+         <description value="Patient resource for describing actors in an payor-to-payor data exchange workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-practitioner.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-practitioner"/>
+         </reference>
+         <name value="ConsentExchangePractitioner"/>
+         <description value="Practitioner resource for describing actors in an payor-to-payor data exchange workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="StructureDefinition:resource"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="StructureDefinition-consent-exchange-related-person.html"/>
+         </extension>
+         <reference>
+            <reference value="StructureDefinition/consent-exchange-related-person"/>
+         </reference>
+         <name value="ConsentExchangeRelatedPerson"/>
+         <description value="RelatedPerson resource for describing actors in an payor-to-payor data exchange workflow."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-str-profile"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-consent-exchange-category-codes.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/consent-exchange-category-codes"/>
+         </reference>
+         <name value="ConsentExchangeCategoryCodes"/>
+         <description value="Consent Exchange - Category Codes"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-ConsentExchangePolicies.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/ConsentExchangePolicies"/>
+         </reference>
+         <name value="ConsentExchangePolicies"/>
+         <description value="Consent Exchange - Policies"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-ConsentExchangeRelations.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/ConsentExchangeRelations"/>
+         </reference>
+         <name value="ConsentExchangeRelations"/>
+         <description value="Consent Exchange - Relationships"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="ValueSet"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="ValueSet-consent-exchange-scope-codes.html"/>
+         </extension>
+         <reference>
+            <reference value="ValueSet/consent-exchange-scope-codes"/>
+         </reference>
+         <name value="ConsentExchangeScopeCodes"/>
+         <description value="Consent Exchange - Scope Codes"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-valueset"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-CmsInteroperabilityPolicyCodes.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/CmsInteroperabilityPolicyCodes"/>
+         </reference>
+         <name value="CmsInteroperabilityPolicyCodes"/>
+         <description value="Policy provisions defined under CMS-9115-F, CMS Interoperability and Patient Access final rule"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-ConsentExchangeRelationships.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/ConsentExchangeRelationships"/>
+         </reference>
+         <name value="ConsentExchangeRelationships"/>
+         <description value="Relationships used to model and exchange consent relationships"/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="CodeSystem"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="CodeSystem-PayorToPayorExchangePolicyCodes.html"/>
+         </extension>
+         <reference>
+            <reference value="CodeSystem/PayorToPayorExchangePolicyCodes"/>
+         </reference>
+         <name value="PayorToPayorExchangePolicyCodes"/>
+         <description value="Policy codes used to define legal frameworks under which consent exchange occurs between payors."/>
+         <exampleBoolean value="false"/>
+         <groupingId value="-term-codesystem"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Bundle"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Bundle-Jennifer-Consents-MA.html"/>
+         </extension>
+         <reference>
+            <reference value="Bundle/Jennifer-Consents-MA"/>
+         </reference>
+         <name value="Jennifer-Consents-MA"/>
+         <description value="Example of all Jennifer Smith consent records from Massachuesettes delivered delivered in a bundle of files."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-Jennifer-MA-Rollup.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/Jennifer-MA-Rollup"/>
+         </reference>
+         <name value="jennifer-ma-rollup"/>
+         <description value="Example rollup of all Jennifer Smith consent records from Massachuesettes delivered in a single file."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Medication"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Medication-estrodiol-contraceptive.html"/>
+         </extension>
+         <reference>
+            <reference value="Medication/estrodiol-contraceptive"/>
+         </reference>
+         <name value="estrodiol-contraceptive"/>
+         <description value="Contraceptive birth control medication."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-example1.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/example1"/>
+         </reference>
+         <name value="example1"/>
+         <description value="Example 1"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-example2.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/example2"/>
+         </reference>
+         <name value="example2"/>
+         <description value="Example 2"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-jane-doe.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/jane-doe"/>
+         </reference>
+         <name value="jane-doe"/>
+         <description value="Jane Doe patient not part of relationship model, used for checking security access."/>
+         <exampleCanonical value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-jennifer-smith.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/jennifer-smith"/>
+         </reference>
+         <name value="jennifer-smith"/>
+         <description value="Jennifer Smith - Patient demographics record."/>
+         <exampleCanonical value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-jennifersmith-al-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/jennifersmith-al-1"/>
+         </reference>
+         <name value="jennifersmith-al-1"/>
+         <description value="Consent record from Alabama"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-jennifersmith-ma-1.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/jennifersmith-ma-1"/>
+         </reference>
+         <name value="jennifersmith-ma-1"/>
+         <description value="Consent record from Massachuesetts for treatment."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-jennifersmith-ma-2.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/jennifersmith-ma-2"/>
+         </reference>
+         <name value="jennifersmith-ma-2"/>
+         <description value="Consent record from Massachuesetts for parental access."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-johnsmith-consent-mass-community-insurance.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/johnsmith-consent-mass-community-insurance"/>
+         </reference>
+         <name value="johnsmith-consent-mass-community-insurance"/>
+         <description value="Consent for AMCE Insurance to share data with Mass."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-johnsmith-consent-org-acme-insurance.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/johnsmith-consent-org-acme-insurance"/>
+         </reference>
+         <name value="johnsmith-consent-org-acme-insurance"/>
+         <description value="Consent for AMCE Insurance to access hospital data."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-johnsmith-consent-org-pillbox.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/johnsmith-consent-org-pillbox"/>
+         </reference>
+         <name value="johnsmith-consent-org-pillbox"/>
+         <description value="Consent to access data for Pillbox app"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-johnsmith-consent-plentyrx.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/johnsmith-consent-plentyrx"/>
+         </reference>
+         <name value="johnsmith-consent-plentyrx"/>
+         <description value="Consent to access data for Pillbox app"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Consent"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Consent-johnsmith-consent-plentyrx-revoke.html"/>
+         </extension>
+         <reference>
+            <reference value="Consent/johnsmith-consent-plentyrx-revoke"/>
+         </reference>
+         <name value="johnsmith-consent-plentyrx-revoke"/>
+         <description value="Consent to access data for PlentyRx app after it was revoked."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-medreq-1234557.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/medreq-1234557"/>
+         </reference>
+         <name value="medreq-1234557"/>
+         <description value="Medication prescription writtin in Alabama by Dr. Shuman"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="MedicationRequest"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="MedicationRequest-medreq-22348957.html"/>
+         </extension>
+         <reference>
+            <reference value="MedicationRequest/medreq-22348957"/>
+         </reference>
+         <name value="medreq-22348957"/>
+         <description value="Medication prescription writtin in Massachuesetts by Dr. Yin"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-acme-insurance.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-acme-insurance"/>
+         </reference>
+         <name value="org-acme-insurance"/>
+         <description value="ACME Insurance Company (Payor 1)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-mass-community-insurance.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-mass-community-insurance"/>
+         </reference>
+         <name value="org-mass-community-insurance"/>
+         <description value="Massachusetts Community Insurance (Payor 2)"/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-pillbox.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-pillbox"/>
+         </reference>
+         <name value="org-pillbox"/>
+         <description value="Online pharmacy organization that offers a mobile app."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-plentyrx.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-plentyrx"/>
+         </reference>
+         <name value="org-plentyrx"/>
+         <description value="Online pharmacy organization that offers a mobile app."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Organization"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Organization-org-together-health.html"/>
+         </extension>
+         <reference>
+            <reference value="Organization/org-together-health"/>
+         </reference>
+         <name value="org-together-health"/>
+         <description value="Clinical management software with patient portal."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Patient"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Patient-patient-john-smith.html"/>
+         </extension>
+         <reference>
+            <reference value="Patient/patient-john-smith"/>
+         </reference>
+         <name value="patient-john-smith"/>
+         <description value="John Smith - Patient demographics record."/>
+         <exampleCanonical value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-patient"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-practitioner-alice-yin.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/practitioner-alice-yin"/>
+         </reference>
+         <name value="practitioner-alice-yin"/>
+         <description value="Dr. Alice Yin - Clinical practitioner located in Massacheusetts."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="Practitioner"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="Practitioner-practitioner-bernard-shuman.html"/>
+         </extension>
+         <reference>
+            <reference value="Practitioner/practitioner-bernard-shuman"/>
+         </reference>
+         <name value="practitioner-bernard-shuman"/>
+         <description value="Dr. Bernard Shuman - Clinical practitioner located in Alabama."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-related-person-jane-smith.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/related-person-jane-smith"/>
+         </reference>
+         <name value="related-person-jane-smith"/>
+         <description value="Jane Smith - Parental relationship record."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-related-person-jane-smith-wife.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/related-person-jane-smith-wife"/>
+         </reference>
+         <name value="related-person-jane-smith-wife"/>
+         <description value="Jane Smith - Spouse relationship record."/>
+         <exampleCanonical value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-related-person-jennifer-smith-daughter.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/related-person-jennifer-smith-daughter"/>
+         </reference>
+         <name value="related-person-jennifer-smith-daughter"/>
+         <description value="Jennifer Smith - Daughter relationship record."/>
+         <exampleCanonical value="http://mehi-ig.tranquildata.com/StructureDefinition/consent-exchange-related-person"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-related-person-john-smith.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/related-person-john-smith"/>
+         </reference>
+         <name value="related-person-john-smith"/>
+         <description value="John Smith - Parental relationship record."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <resource>
+         <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+            <valueString value="RelatedPerson"/>
+         </extension>
+         <extension url="http://hl7.org/fhir/StructureDefinition/implementationguide-page">
+            <valueUri value="RelatedPerson-stranger-001.html"/>
+         </extension>
+         <reference>
+            <reference value="RelatedPerson/stranger-001"/>
+         </reference>
+         <name value="stranger-001"/>
+         <description value="A random stranger to test security access against."/>
+         <exampleBoolean value="true"/>
+         <groupingId value="-ex-example"/>
+      </resource>
+      <page>
+         <nameUrl value="toc.html"/>
+         <title value="Table of Contents"/>
+         <generation value="html"/>
+         <page>
+            <nameUrl value="index.html"/>
+            <title value="Consent Exchange Implementation Guide"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="example1.html"/>
+            <title value="Payor To Payor"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="example2.html"/>
+            <title value="Organizational Relationships"/>
+            <generation value="markdown"/>
+         </page>
+         <page>
+            <nameUrl value="artifacts.html"/>
+            <title value="Artifacts Summary"/>
+            <generation value="html"/>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-careteam.html"/>
+               <title value="ConsentExchangeCareTeam"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-consent.html"/>
+               <title value="ConsentExchangeConsent"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-organization.html"/>
+               <title value="ConsentExchangeOrganization"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-patient.html"/>
+               <title value="ConsentExchangePatient"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-practitioner.html"/>
+               <title value="ConsentExchangePractitioner"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="StructureDefinition-consent-exchange-related-person.html"/>
+               <title value="ConsentExchangeRelatedPerson"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-consent-exchange-category-codes.html"/>
+               <title value="ConsentExchangeCategoryCodes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-ConsentExchangePolicies.html"/>
+               <title value="ConsentExchangePolicies"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-ConsentExchangeRelations.html"/>
+               <title value="ConsentExchangeRelations"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="ValueSet-consent-exchange-scope-codes.html"/>
+               <title value="ConsentExchangeScopeCodes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-CmsInteroperabilityPolicyCodes.html"/>
+               <title value="CmsInteroperabilityPolicyCodes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-ConsentExchangeRelationships.html"/>
+               <title value="ConsentExchangeRelationships"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="CodeSystem-PayorToPayorExchangePolicyCodes.html"/>
+               <title value="PayorToPayorExchangePolicyCodes"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Bundle-Jennifer-Consents-MA.html"/>
+               <title value="Jennifer-Consents-MA"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-Jennifer-MA-Rollup.html"/>
+               <title value="jennifer-ma-rollup"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Medication-estrodiol-contraceptive.html"/>
+               <title value="estrodiol-contraceptive"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-example1.html"/>
+               <title value="example1"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-example2.html"/>
+               <title value="example2"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-jane-doe.html"/>
+               <title value="jane-doe"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-jennifer-smith.html"/>
+               <title value="jennifer-smith"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-jennifersmith-al-1.html"/>
+               <title value="jennifersmith-al-1"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-jennifersmith-ma-1.html"/>
+               <title value="jennifersmith-ma-1"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-jennifersmith-ma-2.html"/>
+               <title value="jennifersmith-ma-2"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-johnsmith-consent-mass-community-insurance.html"/>
+               <title value="johnsmith-consent-mass-community-insurance"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-johnsmith-consent-org-acme-insurance.html"/>
+               <title value="johnsmith-consent-org-acme-insurance"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-johnsmith-consent-org-pillbox.html"/>
+               <title value="johnsmith-consent-org-pillbox"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-johnsmith-consent-plentyrx.html"/>
+               <title value="johnsmith-consent-plentyrx"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Consent-johnsmith-consent-plentyrx-revoke.html"/>
+               <title value="johnsmith-consent-plentyrx-revoke"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationRequest-medreq-1234557.html"/>
+               <title value="medreq-1234557"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="MedicationRequest-medreq-22348957.html"/>
+               <title value="medreq-22348957"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-org-acme-insurance.html"/>
+               <title value="org-acme-insurance"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-org-mass-community-insurance.html"/>
+               <title value="org-mass-community-insurance"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-org-pillbox.html"/>
+               <title value="org-pillbox"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-org-plentyrx.html"/>
+               <title value="org-plentyrx"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Organization-org-together-health.html"/>
+               <title value="org-together-health"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Patient-patient-john-smith.html"/>
+               <title value="patient-john-smith"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-practitioner-alice-yin.html"/>
+               <title value="practitioner-alice-yin"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="Practitioner-practitioner-bernard-shuman.html"/>
+               <title value="practitioner-bernard-shuman"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="RelatedPerson-related-person-jane-smith.html"/>
+               <title value="related-person-jane-smith"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="RelatedPerson-related-person-jane-smith-wife.html"/>
+               <title value="related-person-jane-smith-wife"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="RelatedPerson-related-person-jennifer-smith-daughter.html"/>
+               <title value="related-person-jennifer-smith-daughter"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="RelatedPerson-related-person-john-smith.html"/>
+               <title value="related-person-john-smith"/>
+               <generation value="generated"/>
+            </page>
+            <page>
+               <nameUrl value="RelatedPerson-stranger-001.html"/>
+               <title value="stranger-001"/>
+               <generation value="generated"/>
+            </page>
+         </page>
+      </page>
+      <parameter>
+         <code value="copyrightyear"/>
+         <value value="2021+"/>
+      </parameter>
+      <parameter>
+         <code value="releaselabel"/>
+         <value value="ci-build"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/capabilities"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/examples"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/extensions"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/models"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/operations"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/profiles"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/vocabulary"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/maps"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/testing"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="input/history"/>
+      </parameter>
+      <parameter>
+         <code value="path-resource"/>
+         <value value="fsh-generated/resources"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="template/config"/>
+      </parameter>
+      <parameter>
+         <code value="path-pages"/>
+         <value value="input/images"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="template/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-liquid"/>
+         <value value="input/liquid"/>
+      </parameter>
+      <parameter>
+         <code value="path-qa"/>
+         <value value="temp/qa"/>
+      </parameter>
+      <parameter>
+         <code value="path-temp"/>
+         <value value="temp/pages"/>
+      </parameter>
+      <parameter>
+         <code value="path-output"/>
+         <value value="output"/>
+      </parameter>
+      <parameter>
+         <code value="path-tx-cache"/>
+         <value value="input-cache/txcache"/>
+      </parameter>
+      <parameter>
+         <code value="path-suppressed-warnings"/>
+         <value value="input/ignoreWarnings.txt"/>
+      </parameter>
+      <parameter>
+         <code value="path-history"/>
+         <value value="http://mehi-ig.tranquildata.com/history.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-html"/>
+         <value value="template-page.html"/>
+      </parameter>
+      <parameter>
+         <code value="template-md"/>
+         <value value="template-page-md.html"/>
+      </parameter>
+      <parameter>
+         <code value="apply-contact"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-context"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-copyright"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-jurisdiction"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-license"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-publisher"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="apply-version"/>
+         <value value="true"/>
+      </parameter>
+      <parameter>
+         <code value="active-tables"/>
+         <value value="true"/>
+      </parameter>
+   </definition>
+</ImplementationGuide>
